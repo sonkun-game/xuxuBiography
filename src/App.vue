@@ -112,27 +112,27 @@
     <div class="image_cover" id="image_cover"></div>
 
     <!-- row 1 -->
-    <div class="row">
+    <div class="row photo_row" id="testrow1" @mouseover="onHoverRowPhoto($event,0)">
       <div class="image_item" @mouseover ="onHoverPhoto($event)">
         <img class="w-100" src="./assets/img/img11.jpg" alt="First slide">
       </div>
       <div class="image_item" @mouseover ="onHoverPhoto($event)">
         <img class="w-100" src="./assets/img/img12.jpg" alt="First slide">
       </div>
-      <div class="image_item">
+      <div class="image_item" @mouseover ="onHoverPhoto($event)">
         <img class="w-100" src="./assets/img/img13.jpg" alt="First slide">
       </div>
     </div>
 
     <!-- row 2 -->
-    <div class="row">
-      <div class="image_item">
+    <div class="row photo_row" id="testrow2" @mouseover="onHoverRowPhoto($event,1)">
+      <div class="image_item" @mouseover ="onHoverPhoto($event)">
         <img class="w-100" src="./assets/img/img5.jpg" alt="First slide">
       </div>
-      <div class="image_item">
+      <div class="image_item" @mouseover ="onHoverPhoto($event)">
         <img class="w-100" src="./assets/img/img25.jpg" alt="First slide">
       </div>
-      <div class="image_item">
+      <div class="image_item" @mouseover ="onHoverPhoto($event)">
         <img class="w-100" src="./assets/img/img26.jpg" alt="First slide">
       </div>
     </div>
@@ -154,14 +154,17 @@ export default {
   },
   methods: {
     onHoverPhoto(event) {
-      var element = event.target;
+      var element = event.target; 
       var rect = element.getBoundingClientRect();
       var x = rect.left;
-      var y = rect.top;
       var currentLeft = parseInt(x) || 0;
-      var currentTop = parseInt(y) || 0;
       document.getElementById("image_cover").style.left = currentLeft + 'px';
-      document.getElementById("image_cover").style.top = currentTop + 'px';
+    },
+    onHoverRowPhoto(event, row = 0) {
+      var element = event.target; 
+      var rect = element.getBoundingClientRect();
+      var element_height = rect.height * row;
+      document.getElementById("image_cover").style.top = element_height + 'px';
     }
   }
 }
@@ -366,6 +369,8 @@ export default {
 /* Photo style ----------------------------------> */
 .photo {
   position: relative;
+}
+.photo_row {
 }
 
 .image_item {
