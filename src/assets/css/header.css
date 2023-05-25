@@ -1,0 +1,91 @@
+/* Header CSS -------------------------------------------> */
+.hue-header {
+    z-index: 9;
+    position: absolute;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    border-bottom: 0.5px lightgray solid;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    /* font */
+    font: 'Jost', sans-serif;
+    color: white;
+    /* flex style */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 15px 0px 15px;
+  }
+  
+  .hue-header .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hue-header .item.first {
+    justify-self: left;
+    font-family: 'WildCrazy', sans-serif;
+    font-size: 24px;
+  }
+  
+  .hue-header .item.second {
+    justify-self: center;
+    font-size: 14px;
+  }
+  
+  .hue-header .item.third {
+    justify-self: right;
+    font-size: 18px;
+  }
+  
+  .hue-header .item.third i {
+    width: 40px;
+    cursor: pointer;
+  }
+  
+  .header_section {
+    width: 100px;
+    height: 100%;
+    cursor: pointer;
+    /* center text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* effect */
+    border-bottom: 3px solid transparent;
+    transition: border-bottom-color 1s;
+  }
+  
+  .header_section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: white;
+    transition: width 1s;
+  }
+  
+  .header_section:hover::after {
+    width: 100px;
+  }
+  
+  /* icon color */
+  .fa-facebook:hover {
+    color: #17A9FD;
+  }
+  
+  .fa-instagram:hover {
+    color: #feda75;
+  }
+  
+  .fa-tiktok:hover {
+    color: #010101;
+  }
+  
+  .fa-youtube:hover {
+    color: #c4302b;
+  }
+  
+  /* Header CSS -------------------------------------------> */

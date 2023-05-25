@@ -1,0 +1,22 @@
+/* Slider -----------------------------------------------> */
+.image_slider {
+    height: 729px;
+  }
+  
+  .slide_item {
+    position: relative;
+    top: -20vh;
+  }
+  
+  .slider_title {
+    width: 100%;
+    font-family: PoiretOne;
+    position: absolute;
+    bottom: 5vh;
+    color: white;
+  }
+  
+  .slider_title .small_text {
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+  }

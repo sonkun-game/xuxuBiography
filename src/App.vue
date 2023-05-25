@@ -109,10 +109,24 @@
   <!-- Photo -->
   <div class="photo container-fluid no_padding">
 
-    <div class="image_cover" id="image_cover"></div>
+    <div class="image_cover" id="image_cover">
+      <div class="image_cover_title">
+        <span>Hue Hue Beauty</span>
+        <h1>Image Shot</h1>
+      </div>
+    </div>
+
+    <div class="row photo_row">
+      <div class="image_item" v-for="image,index in gallery" 
+        @mouseover ="onHoverPhoto($event, Math.floor(index/3))"
+        @click="showImage(image)"
+       :key="image.id">
+        <img class="w-100" :src="image.url" alt="Gallery Image">
+      </div>
+    </div>
 
     <!-- row 1 -->
-    <div class="row photo_row" id="testrow1" @mouseover="onHoverRowPhoto($event,0)">
+    <!-- <div class="row photo_row" id="testrow1" @mouseover="onHoverRowPhoto($event,0)">
       <div class="image_item" @mouseover ="onHoverPhoto($event)">
         <img class="w-100" src="./assets/img/img11.jpg" alt="First slide">
       </div>
@@ -122,10 +136,10 @@
       <div class="image_item" @mouseover ="onHoverPhoto($event)">
         <img class="w-100" src="./assets/img/img13.jpg" alt="First slide">
       </div>
-    </div>
+    </div> -->
 
     <!-- row 2 -->
-    <div class="row photo_row" id="testrow2" @mouseover="onHoverRowPhoto($event,1)">
+    <!-- <div class="row photo_row" id="testrow2" @mouseover="onHoverRowPhoto($event,1)">
       <div class="image_item" @mouseover ="onHoverPhoto($event)">
         <img class="w-100" src="./assets/img/img5.jpg" alt="First slide">
       </div>
@@ -135,14 +149,38 @@
       <div class="image_item" @mouseover ="onHoverPhoto($event)">
         <img class="w-100" src="./assets/img/img26.jpg" alt="First slide">
       </div>
+    </div> -->
+
+    <div v-if="selectedImage" class="modal">
+      <img :src="selectedImage.url" alt="Selected Image" @click="hideImage" />
     </div>
 
+  </div>
+
+  <!-- Poster  -->
+  <div class="poster container-fluid">
+    <div class="poster-header">
+      I do for you
+    </div>
   </div>
 </template>
 
 <script>
 
 export default {
+  data() {
+    return {
+      gallery: [
+        { id: 1, url: require('@/assets/img/img11.jpg') },
+        { id: 2, url: require('@/assets/img/img12.jpg') },
+        { id: 3, url: require('@/assets/img/img13.jpg') },
+        { id: 4, url: require('@/assets/img/img5.jpg') },
+        { id: 5, url: require('@/assets/img/img25.jpg') },
+        { id: 6, url: require('@/assets/img/img26.jpg') },
+      ],
+      selectedImage: null
+    }
+  },
   name: 'App',
   head: {
     link: [
@@ -153,44 +191,40 @@ export default {
     ]
   },
   methods: {
-    onHoverPhoto(event) {
+    onHoverPhoto(event, row = 0) {
       var element = event.target; 
       var rect = element.getBoundingClientRect();
       var x = rect.left;
-      var currentLeft = parseInt(x) || 0;
-      document.getElementById("image_cover").style.left = currentLeft + 'px';
-    },
-    onHoverRowPhoto(event, row = 0) {
-      var element = event.target; 
-      var rect = element.getBoundingClientRect();
       var element_height = rect.height * row;
+      var currentLeft = parseInt(x) || 0;
+      // calculate the chosen Image
+
+
+      document.getElementById("image_cover").style.left = currentLeft + 'px';
       document.getElementById("image_cover").style.top = element_height + 'px';
+    },
+    getGalleryRow() {
+      return Math.ceil(this.gallery.length / 3);
+    },
+    showImage(image) {
+      console.log('show image !');
+      this.selectedImage = image;
+    },
+    hideImage() {
+      this.selectedImage = null;
     }
   }
 }
 </script>
 
 <style>
-/* font face */
-@font-face {
-  font-family: Jost;
-  src: url('./assets/font/Jost/Jost-VariableFont_wght.ttf');
-}
+@import url('@/assets/css/font.css');
+@import url('@/assets/css/about.css');
+@import url('@/assets/css/photo.css');
+@import url('@/assets/css/header.css');
+@import url('@/assets/css/slider.css');
+@import url('@/assets/css/poster.css');
 
-@font-face {
-  font-family: MotherTongue;
-  src: url('./assets/font/mother-tongue-personal-use-font/MotherTonguePersonalUse-x3L3m.otf');
-}
-
-@font-face {
-  font-family: WildCrazy;
-  src: url('./assets/font/wildcrazy-font/Wildcrazy-WKYO.ttf');
-}
-
-@font-face {
-  font-family: PoiretOne;
-  src: url('./assets/font/Poiret_One/PoiretOne-Regular.ttf');
-}
 
 .btn {
   font-family: 'Jost', sans-serif;
@@ -205,192 +239,12 @@ export default {
 }
 
 
-/* Header CSS -------------------------------------------> */
-.hue-header {
-  z-index: 9;
-  position: absolute;
-  top: 0;
-  height: 80px;
-  width: 100%;
-  border-bottom: 0.5px lightgray solid;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
-  /* font */
-  font: 'Jost', sans-serif;
-  color: white;
-  /* flex style */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0px 15px 0px 15px;
-}
-
-.hue-header .item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hue-header .item.first {
-  justify-self: left;
-  font-family: 'WildCrazy', sans-serif;
-  font-size: 24px;
-}
-
-.hue-header .item.second {
-  justify-self: center;
-  font-size: 14px;
-}
-
-.hue-header .item.third {
-  justify-self: right;
-  font-size: 18px;
-}
-
-.hue-header .item.third i {
-  width: 40px;
-  cursor: pointer;
-}
-
-.header_section {
-  width: 100px;
-  height: 100%;
-  cursor: pointer;
-  /* center text */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* effect */
-  border-bottom: 3px solid transparent;
-  transition: border-bottom-color 1s;
-}
-
-.header_section::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  width: 0;
-  height: 3px;
-  background-color: white;
-  transition: width 1s;
-}
-
-.header_section:hover::after {
-  width: 100px;
-}
-
-/* icon color */
-.fa-facebook:hover {
-  color: #17A9FD;
-}
-
-.fa-instagram:hover {
-  color: #feda75;
-}
-
-.fa-tiktok:hover {
-  color: #010101;
-}
-
-.fa-youtube:hover {
-  color: #c4302b;
-}
-
-/* Header CSS -------------------------------------------> */
-
-
 .no_padding {
   padding: 0 !important;
 }
 
-/* Slider -----------------------------------------------> */
-.image_slider {
-  height: 729px;
-}
 
-.slide_item {
-  position: relative;
-  top: -20vh;
-}
 
-.slider_title {
-  width: 100%;
-  font-family: PoiretOne;
-  position: absolute;
-  bottom: 5vh;
-  color: white;
-}
-
-.slider_title .small_text {
-  font-family: 'Jost', sans-serif;
-  font-size: 20px;
-}
-
-/* About ----------------------------------------------> */
-.about {
-  position: relative;
-  color: black;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding-top: 110px;
-  padding-bottom: 110px;
-}
-
-.about_img {
-  max-width: 35%;
-  padding-left: 15px;
-  padding-right: 15px;
-
-}
-
-.left_description,
-.right_description {
-  max-width: 25%;
-  font-family: 'PoiretOne', sans-serif;
-  text-align: left;
-  display: flex;
-}
-
-.left_description p,
-.right_description p {
-  font-size: 18px;
-  font-weight: 500;
-}
-
-.description_header {
-  font-weight: 500;
-  padding-bottom: 15px;
-}
-
-.description_number {
-  font-size: 130px;
-}
-
-/* Photo style ----------------------------------> */
-.photo {
-  position: relative;
-}
-.photo_row {
-}
-
-.image_item {
-  position: relative;
-  max-width: 33%;
-  background-color: black;
-}
-
-.image_cover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 33.8%;
-  height: 50%;
-  cursor: pointer;
-  display: block;
-  z-index: 1;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
-  transition: 0.5s;
-}
 </style>
 
 
