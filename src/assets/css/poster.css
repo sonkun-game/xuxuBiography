@@ -1,8 +1,27 @@
 .poster {
     padding: 100px 50px 100px 50px;
+    display: flex;
+    flex-direction: column;
 }
 .poster-header {
     font-size: 50px;
     font-family: 'PoiretOne', sans-serif;
-    float: left;
+    text-align: left;
+}
+.poster-body {
+    display: flex;
+}
+.card {
+    cursor: pointer;
+    padding: 20px;
+    margin: 20px;
+}
+.card-title {
+    font-family: 'PoiretOne', sans-serif;
+    text-align: left;
+}
+.card-text {
+    font-family: 'Jost', sans-serif;
+    text-align: left;
+    font-size: 16px;
 }

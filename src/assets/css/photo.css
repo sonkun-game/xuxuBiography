@@ -5,8 +5,13 @@
   
   .image_item {
     position: relative;
-    max-width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 33%;
+    max-height: 641px;
     background-color: black;
+    overflow: hidden;
   }
   
   .image_cover {

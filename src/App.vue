@@ -125,32 +125,6 @@
       </div>
     </div>
 
-    <!-- row 1 -->
-    <!-- <div class="row photo_row" id="testrow1" @mouseover="onHoverRowPhoto($event,0)">
-      <div class="image_item" @mouseover ="onHoverPhoto($event)">
-        <img class="w-100" src="./assets/img/img11.jpg" alt="First slide">
-      </div>
-      <div class="image_item" @mouseover ="onHoverPhoto($event)">
-        <img class="w-100" src="./assets/img/img12.jpg" alt="First slide">
-      </div>
-      <div class="image_item" @mouseover ="onHoverPhoto($event)">
-        <img class="w-100" src="./assets/img/img13.jpg" alt="First slide">
-      </div>
-    </div> -->
-
-    <!-- row 2 -->
-    <!-- <div class="row photo_row" id="testrow2" @mouseover="onHoverRowPhoto($event,1)">
-      <div class="image_item" @mouseover ="onHoverPhoto($event)">
-        <img class="w-100" src="./assets/img/img5.jpg" alt="First slide">
-      </div>
-      <div class="image_item" @mouseover ="onHoverPhoto($event)">
-        <img class="w-100" src="./assets/img/img25.jpg" alt="First slide">
-      </div>
-      <div class="image_item" @mouseover ="onHoverPhoto($event)">
-        <img class="w-100" src="./assets/img/img26.jpg" alt="First slide">
-      </div>
-    </div> -->
-
     <div v-if="selectedImage" class="modal">
       <img :src="selectedImage.url" alt="Selected Image" @click="hideImage" />
     </div>
@@ -162,18 +136,58 @@
     <div class="poster-header">
       I do for you
     </div>
+    <div class="poster-body">
+
+      <div class="card">
+        <img src="@/assets/img/img28.jpg" alt="Poster Image" />
+        <div class="card-body">
+          <h2 class="card-title">Hue Hue Photo</h2>
+          <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="@/assets/img/img31.jpg" alt="Poster Image" />
+        <div class="card-body">
+          <h2 class="card-title">Hue Hue Photo</h2>
+          <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="@/assets/img/img34.jpg" alt="Poster Image" />
+        <div class="card-body">
+          <h2 class="card-title">Hue Hue Photo</h2>
+          <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Testimonial -->
+  <div class="testimonial">
+
   </div>
 </template>
 
 <script>
 
+window.onload = function() {
+  // Set scroll position to left on page load
+  window.scrollTo(0, 0);
+
+  // Continuously scroll left
+  setInterval(function() {
+    window.scrollBy(-1, 0); // Adjust the values as per your preference
+  }, 10); // Adjust the scroll speed as per your preference
+};
+
 export default {
   data() {
     return {
       gallery: [
-        { id: 1, url: require('@/assets/img/img11.jpg') },
-        { id: 2, url: require('@/assets/img/img12.jpg') },
-        { id: 3, url: require('@/assets/img/img13.jpg') },
+        { id: 1, url: require('@/assets/img/img44.jpg') },
+        { id: 2, url: require('@/assets/img/img45.jpg') },
+        { id: 3, url: require('@/assets/img/img39.jpg') },
         { id: 4, url: require('@/assets/img/img5.jpg') },
         { id: 5, url: require('@/assets/img/img25.jpg') },
         { id: 6, url: require('@/assets/img/img26.jpg') },
@@ -224,6 +238,7 @@ export default {
 @import url('@/assets/css/header.css');
 @import url('@/assets/css/slider.css');
 @import url('@/assets/css/poster.css');
+@import url('@/assets/css/testimonial.css');
 
 
 .btn {
