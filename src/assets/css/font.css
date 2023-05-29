@@ -18,3 +18,16 @@
     font-family: PoiretOne;
     src: url('@/assets/font/Poiret_One/PoiretOne-Regular.ttf');
   }
+
+  @font-face {
+    font-family: DFVN;
+    src: url('@/assets/font/DFVN/DFVN.otf');
+  }
+
+.Fs20 {
+  font-size: 20px;
+}
+
+.Fs24 {
+  font-size: 24px;
+}

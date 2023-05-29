@@ -133,7 +133,7 @@
     <!-- Poster  -->
     <div class="poster container-fluid">
       <div class="poster-header">
-        I do for you
+        Hue Hue Fashion
       </div>
       <div class="poster-body">
 
@@ -167,7 +167,70 @@
 
     <!-- Testimonial -->
     <div class="testimonial">
+      <div id="testimonial" class="carousel slide" data-ride="carousel">
 
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="image_slider_2">
+              <div class="top_caption">Testimonial</div>
+              <div class="slider_paragraph_title">
+                <h3>
+                  <span>"Anh thích những tấm ảnh của em"</span>
+                </h3>
+                <div class="slider_comment">
+                  <img src="@/assets/logo3.jpg" class="slider_comment_avatar rounded-circle" alt="Son image" />
+                </div>
+                <div class="small_text">
+                  Hoang Son, The Software Developer
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="image_slider_2">
+              <div class="top_caption">Testimonial</div>
+              <div class="slider_paragraph_title">
+                <h3>
+                  <span>"Anh thích con người em"</span>
+                </h3>
+                <div class="slider_comment">
+                  <img src="@/assets/logo3.jpg" class="slider_comment_avatar rounded-circle" alt="Son image" />
+                </div>
+                <div class="small_text">
+                  Hoang Son, The Software Developer
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="image_slider_2">
+              <div class="top_caption">Testimonial</div>
+              <div class="slider_paragraph_title">
+                <h3>
+                  <span>"Chúc mừng sinh nhật em 🎂, hi vọng em luôn mỉm cười mỗi ngày"</span>
+                </h3>
+                <div class="slider_comment">
+                  <img src="@/assets/logo3.jpg" class="slider_comment_avatar rounded-circle" alt="Son image" />
+                </div>
+                <div class="small_text">
+                  Hoang Son, The Software Developer
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#testimonial" data-slide="prev">
+          <span><i class="fa-solid fa-chevron-left Fs24"></i></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#testimonial" data-slide="next">
+          <span><i class="fa-solid fa-chevron-right Fs24"></i></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
     </div>
   </div>
 </template>
