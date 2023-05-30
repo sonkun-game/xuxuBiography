@@ -232,6 +232,80 @@
         </a>
       </div>
     </div>
+
+    <div class="blank_space"></div>
+    <!-- Infinite Loop -->
+    <div class="image-container" ref="imageContainer" @mousedown="startDrag" @mousemove="drag" @mouseup="endDrag"
+      @mouseleave="endDrag">
+      <div class="image-list">
+        <div>
+          <img src="@/assets/square_img_300/img1.jpg" />
+          <div class="image-item-cover">
+            <i class="fa-brands fa-instagram Fs24"></i>
+          </div>
+        </div>
+        <div>
+          <img src="@/assets/square_img_300/img2.jpg" />
+          <div class="image-item-cover">
+            <i class="fa-brands fa-instagram Fs24"></i>
+          </div>
+        </div>
+        <div>
+          <img src="@/assets/square_img_300/img3.jpg" />
+          <div class="image-item-cover">
+            <i class="fa-brands fa-instagram Fs24"></i>
+          </div>
+        </div>
+        <div>
+          <img src="@/assets/square_img_300/img4.jpg" />
+          <div class="image-item-cover">
+            <i class="fa-brands fa-instagram Fs24"></i>
+          </div>
+        </div>
+        <div>
+          <img src="@/assets/square_img_300/img5.jpg" />
+          <div class="image-item-cover">
+            <i class="fa-brands fa-instagram Fs24"></i>
+          </div>
+        </div>
+        <div>
+          <img src="@/assets/square_img_300/img6.jpg" />
+          <div class="image-item-cover">
+            <i class="fa-brands fa-instagram Fs24"></i>
+          </div>
+        </div>
+        <div>
+          <img src="@/assets/square_img_300/img7.jpg" />
+          <div class="image-item-cover">
+            <i class="fa-brands fa-instagram Fs24"></i>
+          </div>
+        </div>
+        <div>
+          <img src="@/assets/square_img_300/img8.jpg" />
+          <div class="image-item-cover">
+            <i class="fa-brands fa-instagram Fs24"></i>
+          </div>
+        </div>
+        <div>
+          <img src="@/assets/square_img_300/img9.jpg" />
+          <div class="image-item-cover">
+            <i class="fa-brands fa-instagram Fs24"></i>
+          </div>
+        </div>
+        <div>
+          <img src="@/assets/square_img_300/img10.jpg" />
+          <div class="image-item-cover">
+            <i class="fa-brands fa-instagram Fs24"></i>
+          </div>
+        </div>
+        <div>
+          <img src="@/assets/square_img_300/img11.jpg" />
+          <div class="image-item-cover">
+            <i class="fa-brands fa-instagram Fs24"></i>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -258,7 +332,14 @@ export default {
         { id: 5, url: require('@/assets/img/img25.jpg') },
         { id: 6, url: require('@/assets/img/img26.jpg') },
       ],
-      selectedImage: null
+      selectedImage: null,
+      // For infinite loop
+      isDragging: false,
+      startPosition: 0,
+      currentScrollLeft: 0,
+      velocity: 0,
+      lastTime: 0,
+      animationFrameId: null,
     }
   },
   name: 'App',
@@ -278,8 +359,6 @@ export default {
       var element_height = 558 * row;
       var currentLeft = parseInt(x) || 0;
       // calculate the chosen Image
-
-
       document.getElementById("image_cover").style.left = currentLeft + 'px';
       document.getElementById("image_cover").style.top = element_height + 'px';
     },
@@ -292,7 +371,60 @@ export default {
     },
     hideImage() {
       this.selectedImage = null;
+    },
+    // Infinite Slider
+    // startDrag(event) {
+    //   this.isDragging = true;
+    //   this.startPosition = event.clientX;
+    //   this.startScrollLeft = this.$refs.imageContainer.scrollLeft;
+    // },
+    // drag(event) {
+    //   if (this.isDragging) {
+    //     const delta = event.clientX - this.startPosition;
+    //     this.$refs.imageContainer.scrollLeft = this.startScrollLeft - delta;
+    //   }
+    // },
+    // endDrag() {
+    //   this.isDragging = false;
+    // }
+    startDrag(event) {
+      this.isDragging = true;
+      this.startPosition = event.clientX;
+      this.startScrollLeft = this.$refs.imageContainer.scrollLeft;
+      this.velocity = 0;
+      this.lastTime = performance.now();
+
+      cancelAnimationFrame(this.animationFrameId);
+    },
+    drag(event) {
+      if (this.isDragging) {
+        const delta = event.clientX - this.startPosition;
+        const currentTime = performance.now();
+        const timeDelta = currentTime - this.lastTime;
+
+        this.velocity = delta / timeDelta;
+        this.$refs.imageContainer.scrollLeft = this.startScrollLeft - delta;
+
+        this.lastTime = currentTime;
+      }
+    },
+    endDrag() {
+      this.isDragging = false;
+      this.animationFrameId = requestAnimationFrame(this.decelerate);
+    },
+    decelerate() {
+      if (Math.abs(this.velocity) > 0.1) {
+        this.$refs.imageContainer.scrollLeft -= this.velocity;
+        this.velocity *= 0.95;
+        this.animationFrameId = requestAnimationFrame(this.decelerate);
+      }
+    },
+    stopAnimation() {
+      cancelAnimationFrame(this.animationFrameId);
     }
+  },
+  beforeUnmount() {
+    this.stopAnimation();
   }
 }
 </script>
@@ -305,6 +437,7 @@ export default {
 @import url('@/assets/css/slider.css');
 @import url('@/assets/css/poster.css');
 @import url('@/assets/css/testimonial.css');
+@import url('@/assets/css/infinite_slider.css');
 
 
 .btn {
@@ -319,9 +452,22 @@ export default {
   color: #2c3e50;
 }
 
-
 .no_padding {
   padding: 0 !important;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.blank_space {
+  width: 100%;
+  height: 600px;
+  background-color: white;
 }
 </style>
 
