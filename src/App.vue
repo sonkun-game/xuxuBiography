@@ -306,6 +306,11 @@
         </div>
       </div>
     </div>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-to-top" @click="scrollToTop" @scroll="checkScrollPosition" v-if="showScrollButton">
+      &#8593;
+    </button>
   </div>
 </template>
 
@@ -314,12 +319,14 @@
 window.onload = function () {
   // Set scroll position to left on page load
   window.scrollTo(0, 0);
-
   // Continuously scroll left
   setInterval(function () {
     window.scrollBy(-1, 0); // Adjust the values as per your preference
   }, 10); // Adjust the scroll speed as per your preference
 };
+
+
+
 
 export default {
   data() {
@@ -340,6 +347,7 @@ export default {
       velocity: 0,
       lastTime: 0,
       animationFrameId: null,
+      showScrollButton: false,
     }
   },
   name: 'App',
@@ -372,28 +380,12 @@ export default {
     hideImage() {
       this.selectedImage = null;
     },
-    // Infinite Slider
-    // startDrag(event) {
-    //   this.isDragging = true;
-    //   this.startPosition = event.clientX;
-    //   this.startScrollLeft = this.$refs.imageContainer.scrollLeft;
-    // },
-    // drag(event) {
-    //   if (this.isDragging) {
-    //     const delta = event.clientX - this.startPosition;
-    //     this.$refs.imageContainer.scrollLeft = this.startScrollLeft - delta;
-    //   }
-    // },
-    // endDrag() {
-    //   this.isDragging = false;
-    // }
     startDrag(event) {
       this.isDragging = true;
       this.startPosition = event.clientX;
       this.startScrollLeft = this.$refs.imageContainer.scrollLeft;
       this.velocity = 0;
       this.lastTime = performance.now();
-
       cancelAnimationFrame(this.animationFrameId);
     },
     drag(event) {
@@ -401,10 +393,8 @@ export default {
         const delta = event.clientX - this.startPosition;
         const currentTime = performance.now();
         const timeDelta = currentTime - this.lastTime;
-
         this.velocity = delta / timeDelta;
         this.$refs.imageContainer.scrollLeft = this.startScrollLeft - delta;
-
         this.lastTime = currentTime;
       }
     },
@@ -421,10 +411,22 @@ export default {
     },
     stopAnimation() {
       cancelAnimationFrame(this.animationFrameId);
-    }
+    },
+    checkScrollPosition() {
+      this.showScrollButton =
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20;
+    },
+    scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    },
   },
   beforeUnmount() {
     this.stopAnimation();
+    window.removeEventListener("scroll", this.checkScrollPosition);
   }
 }
 </script>
@@ -438,6 +440,7 @@ export default {
 @import url('@/assets/css/poster.css');
 @import url('@/assets/css/testimonial.css');
 @import url('@/assets/css/infinite_slider.css');
+@import url('@/assets/css/scrollToTop.css');
 
 
 .btn {
@@ -466,7 +469,7 @@ img {
 
 .blank_space {
   width: 100%;
-  height: 600px;
+  height: 300px;
   background-color: white;
 }
 </style>
