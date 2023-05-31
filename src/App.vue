@@ -1,5 +1,9 @@
 <template>
   <div>
+
+    <!-- Follow me !! -->
+    <!-- <div class="social"></div> -->
+
     <!-- Slider Section -->
     <div class="container-fluid no_padding">
       <nav class="hue-header">
@@ -308,7 +312,7 @@
     </div>
 
     <!-- Scroll to top button -->
-    <button class="scroll-to-top" @click="scrollToTop" @scroll="checkScrollPosition" v-if="showScrollButton">
+    <button class="scroll-to-top" @click="scrollToTop" @scroll="checkScrollPosition" >
       &#8593;
     </button>
   </div>
@@ -347,7 +351,7 @@ export default {
       velocity: 0,
       lastTime: 0,
       animationFrameId: null,
-      showScrollButton: false,
+      showScrollButton: true,
     }
   },
   name: 'App',
@@ -413,9 +417,11 @@ export default {
       cancelAnimationFrame(this.animationFrameId);
     },
     checkScrollPosition() {
-      this.showScrollButton =
-        document.body.scrollTop > 20 ||
-        document.documentElement.scrollTop > 20;
+      console.log("checkScrollPosition");
+      this.showScrollButton = true;
+      // this.showScrollButton =
+      //   document.body.scrollTop > 20 ||
+      //   document.documentElement.scrollTop > 20;
     },
     scrollToTop() {
       window.scrollTo({
@@ -440,6 +446,7 @@ export default {
 @import url('@/assets/css/poster.css');
 @import url('@/assets/css/testimonial.css');
 @import url('@/assets/css/infinite_slider.css');
+@import url('@/assets/css/social.css');
 @import url('@/assets/css/scrollToTop.css');
 
 
