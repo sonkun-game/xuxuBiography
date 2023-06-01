@@ -5,18 +5,18 @@
     <!-- <div class="social"></div> -->
 
     <!-- Slider Section -->
-    <div class="container-fluid no_padding">
+    <div class="container-fluid no_padding" id="huehue_carousel">
       <nav class="hue-header">
         <div class="item first">
           huehuebiography
         </div>
         <div class="item second">
-          <div class="header_section">Home</div>
-          <div class="header_section">Portfolio</div>
-          <div class="header_section">Service</div>
-          <div class="header_section">About</div>
-          <div class="header_section">Blog</div>
-          <div class="header_section">Contact</div>
+          <div class="header_section" @click="scrollToEl('#huehue_carousel', { duration: 1000 })">Home</div>
+          <div class="header_section" @click="scrollToEl('#huehue_portfolio', { duration: 1000 })">Portfolio</div>
+          <div class="header_section" @click="scrollToEl('#huehue_about', { duration: 1000 })">About</div>
+          <div class="header_section" @click="scrollToEl('#huehue_blog', { duration: 1000 })">Blog</div>
+          <div class="header_section" @click="scrollToEl('#huehue_insta', { duration: 1000 })">Insta</div>
+          <div class="header_section" @click="scrollToEl('#huehue_testimonal', { duration: 1000 })">Testimonial</div>
         </div>
         <div class="item third">
           <i class="fa-brands fa-facebook"></i>
@@ -78,7 +78,7 @@
     </div>
 
     <!-- About -->
-    <div class="container-fluid about">
+    <div class="container-fluid about" id="huehue_about">
       <div class="left_description">
         <div class="m-auto">
           <h1 class="description_header">
@@ -112,7 +112,7 @@
     </div>
 
     <!-- Photo -->
-    <div class="photo container-fluid no_padding">
+    <div class="photo container-fluid no_padding" id="huehue_portfolio">
 
       <div class="image_cover" id="image_cover">
         <div class="image_cover_title">
@@ -135,7 +135,7 @@
     </div>
 
     <!-- Poster  -->
-    <div class="poster container-fluid">
+    <div class="poster container-fluid" id="huehue_blog">
       <div class="poster-header">
         Hue Hue Fashion
       </div>
@@ -170,7 +170,7 @@
     </div>
 
     <!-- Testimonial -->
-    <div class="testimonial">
+    <div class="testimonial" id="huehue_testimonal">
       <div id="testimonial" class="carousel slide" data-ride="carousel">
 
         <!-- Wrapper for slides -->
@@ -237,10 +237,13 @@
       </div>
     </div>
 
-    <div class="blank_space"></div>
     <!-- Infinite Loop -->
-    <div class="image-container" ref="imageContainer" @mousedown="startDrag" @mousemove="drag" @mouseup="endDrag"
+    <div id="huehue_insta" class="image-container" ref="imageContainer" @mousedown="startDrag" @mousemove="drag" @mouseup="endDrag"
       @mouseleave="endDrag">
+      <div class="insta-header">
+        Follow my instagram for more ^^
+      </div>
+
       <div class="image-list">
         <div>
           <img src="@/assets/square_img_300/img1.jpg" />
@@ -312,27 +315,25 @@
     </div>
 
     <!-- Scroll to top button -->
-    <button class="scroll-to-top" @click="scrollToTop" @scroll="checkScrollPosition" >
-      &#8593;
+    <button class="scroll-to-top" @click="scrollToTop()">
+      <i class="fa-solid fa-chevron-up"></i>
     </button>
   </div>
 </template>
 
+
 <script>
+import vueScrollTo from 'vue-scrollto';
 
 window.onload = function () {
-  // Set scroll position to left on page load
   window.scrollTo(0, 0);
-  // Continuously scroll left
   setInterval(function () {
-    window.scrollBy(-1, 0); // Adjust the values as per your preference
-  }, 10); // Adjust the scroll speed as per your preference
+    window.scrollBy(-1, 0);
+  }, 10);
 };
 
-
-
-
 export default {
+
   data() {
     return {
       gallery: [
@@ -416,23 +417,15 @@ export default {
     stopAnimation() {
       cancelAnimationFrame(this.animationFrameId);
     },
-    checkScrollPosition() {
-      console.log("checkScrollPosition");
-      this.showScrollButton = true;
-      // this.showScrollButton =
-      //   document.body.scrollTop > 20 ||
-      //   document.documentElement.scrollTop > 20;
-    },
     scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
+      vueScrollTo.scrollTo('#huehue_carousel', { duration: 1500 });
     },
+    scrollToEl(id) {
+      vueScrollTo.scrollTo(id, { duration: 1000 });
+    }
   },
   beforeUnmount() {
     this.stopAnimation();
-    window.removeEventListener("scroll", this.checkScrollPosition);
   }
 }
 </script>
@@ -476,7 +469,7 @@ img {
 
 .blank_space {
   width: 100%;
-  height: 300px;
+  height: 200px;
   background-color: white;
 }
 </style>
