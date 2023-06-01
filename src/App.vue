@@ -458,7 +458,7 @@ export default {
   padding: 0 !important;
 }
 
-img {
+* {
   -webkit-user-drag: none;
   user-select: none;
   -moz-user-select: none;
