@@ -1,5 +1,5 @@
 <template>
-  <div class="custom-cursor">
+  <div>
 
     <!-- Follow me !! -->
     <!-- <div class="social"></div> -->
@@ -441,10 +441,6 @@ export default {
 @import url('@/assets/css/infinite_slider.css');
 @import url('@/assets/css/social.css');
 @import url('@/assets/css/scrollToTop.css');
-
-.custom-cursor {
-  cursor: url('@/assets/hue_cursor.png'), auto;
-}
 
 .btn {
   font-family: 'Jost', sans-serif;
