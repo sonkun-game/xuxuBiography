@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="custom-cursor">
 
     <!-- Follow me !! -->
     <!-- <div class="social"></div> -->
@@ -238,8 +238,8 @@
     </div>
 
     <!-- Infinite Loop -->
-    <div id="huehue_insta" class="image-container" ref="imageContainer" @mousedown="startDrag" @mousemove="drag" @mouseup="endDrag"
-      @mouseleave="endDrag">
+    <div id="huehue_insta" class="image-container" ref="imageContainer" @mousedown="startDrag" @mousemove="drag"
+      @mouseup="endDrag" @mouseleave="endDrag">
       <div class="insta-header">
         Follow my instagram for more ^^
       </div>
@@ -442,6 +442,9 @@ export default {
 @import url('@/assets/css/social.css');
 @import url('@/assets/css/scrollToTop.css');
 
+.custom-cursor {
+  cursor: url('@/assets/hue_cursor.png'), auto;
+}
 
 .btn {
   font-family: 'Jost', sans-serif;
