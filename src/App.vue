@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container-fluid no_padding">
 
     <!-- Follow me !! -->
     <!-- <div class="social"></div> -->
@@ -441,6 +441,7 @@ export default {
 @import url('@/assets/css/infinite_slider.css');
 @import url('@/assets/css/social.css');
 @import url('@/assets/css/scrollToTop.css');
+@import url('@/assets/css/mobile.css');
 
 .btn {
   font-family: 'Jost', sans-serif;
