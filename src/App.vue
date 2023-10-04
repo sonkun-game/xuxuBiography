@@ -5,18 +5,18 @@
     <!-- <div class="social"></div> -->
 
     <!-- Slider Section -->
-    <div class="container-fluid no_padding" id="huehue_carousel">
-      <nav class="hue-header">
+    <div class="container-fluid no_padding" id="carousel">
+      <nav class="header">
         <div class="item first">
-          huehuebiography
+          xuxubiography
         </div>
         <div class="item second">
-          <div class="header_section" @click="scrollToEl('#huehue_carousel', { duration: 1000 })">Home</div>
-          <div class="header_section" @click="scrollToEl('#huehue_portfolio', { duration: 1000 })">Portfolio</div>
-          <div class="header_section" @click="scrollToEl('#huehue_about', { duration: 1000 })">About</div>
-          <div class="header_section" @click="scrollToEl('#huehue_blog', { duration: 1000 })">Blog</div>
-          <div class="header_section" @click="scrollToEl('#huehue_insta', { duration: 1000 })">Insta</div>
-          <div class="header_section" @click="scrollToEl('#huehue_testimonal', { duration: 1000 })">Testimonial</div>
+          <div class="header_section" @click="scrollToEl('#carousel', { duration: 1000 })">Home</div>
+          <div class="header_section" @click="scrollToEl('#portfolio', { duration: 1000 })">Portfolio</div>
+          <div class="header_section" @click="scrollToEl('#about', { duration: 1000 })">About</div>
+          <div class="header_section" @click="scrollToEl('#blog', { duration: 1000 })">Blog</div>
+          <div class="header_section" @click="scrollToEl('#insta', { duration: 1000 })">Insta</div>
+          <div class="header_section" @click="scrollToEl('#testimonal', { duration: 1000 })">Testimonial</div>
         </div>
         <div class="item third">
           <i class="fa-brands fa-facebook"></i>
@@ -78,11 +78,11 @@
     </div>
 
     <!-- About -->
-    <div class="container-fluid about" id="huehue_about">
+    <div class="container-fluid about" id="about">
       <div class="left_description">
         <div class="m-auto">
           <h1 class="description_header">
-            Hi there, my name Hue and I love photography
+            Hi there, my name Xu and I love photography
           </h1>
           <p>
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
@@ -112,11 +112,11 @@
     </div>
 
     <!-- Photo -->
-    <div class="photo container-fluid no_padding" id="huehue_portfolio">
+    <div class="photo container-fluid no_padding" id="portfolio">
 
       <div class="image_cover" id="image_cover">
         <div class="image_cover_title">
-          <span>Hue Hue Beauty</span>
+          <span>Xu Xu Beauty</span>
           <h1>Image Shot</h1>
         </div>
       </div>
@@ -135,16 +135,16 @@
     </div>
 
     <!-- Poster  -->
-    <div class="poster container-fluid" id="huehue_blog">
+    <div class="poster container-fluid" id="blog">
       <div class="poster-header">
-        Hue Hue Fashion
+        Xu Xu Fashion
       </div>
       <div class="poster-body">
 
         <div class="card">
           <img src="@/assets/img/img28.jpg" alt="Poster Image" />
           <div class="card-body">
-            <h2 class="card-title">Hue Hue Photo</h2>
+            <h2 class="card-title">Xu Xu Photo</h2>
             <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
               laudantium, totam rem aperiam, eaque ipsa quae.</p>
           </div>
@@ -152,7 +152,7 @@
         <div class="card">
           <img src="@/assets/img/img31.jpg" alt="Poster Image" />
           <div class="card-body">
-            <h2 class="card-title">Hue Hue Photo</h2>
+            <h2 class="card-title">Xu Xu Photo</h2>
             <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
               laudantium, totam rem aperiam, eaque ipsa quae.</p>
           </div>
@@ -160,7 +160,7 @@
         <div class="card">
           <img src="@/assets/img/img34.jpg" alt="Poster Image" />
           <div class="card-body">
-            <h2 class="card-title">Hue Hue Photo</h2>
+            <h2 class="card-title">Xu Xu Photo</h2>
             <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
               laudantium, totam rem aperiam, eaque ipsa quae.</p>
           </div>
@@ -170,7 +170,7 @@
     </div>
 
     <!-- Testimonial -->
-    <div class="testimonial" id="huehue_testimonal">
+    <div class="testimonial" id="testimonal">
       <div id="testimonial" class="carousel slide" data-ride="carousel">
 
         <!-- Wrapper for slides -->
@@ -238,7 +238,7 @@
     </div>
 
     <!-- Infinite Loop -->
-    <div id="huehue_insta" class="image-container" ref="imageContainer" @mousedown="startDrag" @mousemove="drag"
+    <div id="insta" class="image-container" ref="imageContainer" @mousedown="startDrag" @mousemove="drag"
       @mouseup="endDrag" @mouseleave="endDrag">
       <div class="insta-header">
         Follow my instagram for more ^^
@@ -418,7 +418,7 @@ export default {
       cancelAnimationFrame(this.animationFrameId);
     },
     scrollToTop() {
-      vueScrollTo.scrollTo('#huehue_carousel', { duration: 1500 });
+      vueScrollTo.scrollTo('#carousel', { duration: 1500 });
     },
     scrollToEl(id) {
       vueScrollTo.scrollTo(id, { duration: 1000 });

@@ -1,5 +1,5 @@
 /* Header CSS -------------------------------------------> */
-.hue-header {
+.header {
     z-index: 9;
     position: absolute;
     top: 0;
@@ -17,29 +17,29 @@
     padding: 0px 15px 0px 15px;
   }
   
-  .hue-header .item {
+  .header .item {
     display: flex;
     align-items: center;
     justify-content: center;
   }
   
-  .hue-header .item.first {
+  .header .item.first {
     justify-self: left;
     font-family: 'WildCrazy', sans-serif;
     font-size: 24px;
   }
   
-  .hue-header .item.second {
+  .header .item.second {
     justify-self: center;
     font-size: 14px;
   }
   
-  .hue-header .item.third {
+  .header .item.third {
     justify-self: right;
     font-size: 18px;
   }
   
-  .hue-header .item.third i {
+  .header .item.third i {
     width: 40px;
     cursor: pointer;
   }

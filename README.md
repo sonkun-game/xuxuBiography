@@ -1,4 +1,4 @@
-# hue-biography
+# xu-biography
 
 ## Project setup
 ```

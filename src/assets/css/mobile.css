@@ -4,10 +4,10 @@
     .slide_item {
         top: 0;
     }
-    .hue-header .item.first {
+    .header .item.first {
         font-size: 14px;
     }
-    .hue-header .item.second, .hue-header .item.third {
+    .header .item.second, .header .item.third {
         display:  none;
     }
     .image_slider {
