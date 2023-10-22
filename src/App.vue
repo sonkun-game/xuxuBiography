@@ -39,28 +39,28 @@
           <div class="carousel-item active">
             <div class="image_slider">
               <img class="slide_item w-100" src="./assets/slide/slide0.jpg" alt="First slide">
-              <div class="slider_title">
+              <!-- <div class="slider_title">
                 <span class="small_text">Action Shot</span>
                 <h1>Nature of beauty</h1>
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="carousel-item">
             <div class="image_slider">
               <img class="slide_item w-100" src="./assets/slide/slide1.jpg" alt="Second slide">
-              <div class="slider_title">
+              <!-- <div class="slider_title">
                 <span class="small_text">Action Shot</span>
                 <h1>Nature of beauty</h1>
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="carousel-item">
             <div class="image_slider">
               <img class="slide_item w-100" src="./assets/slide/slide2.jpg" alt="Third slide">
-              <div class="slider_title">
+              <!-- <div class="slider_title">
                 <span class="small_text">Action Shot</span>
                 <h1>Nature of beauty</h1>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -124,12 +124,12 @@
       <div class="row photo_row">
         <div class="image_item" v-for="image, index in gallery" @mouseover="onHoverPhoto($event, Math.floor(index / 3))"
           @click="showImage(image)" :key="image.id">
-          <!-- <img class="w-100" :src="image.url" alt="Gallery Image"> -->
+          <img class="w-100" :src="image.url" alt="Gallery Image">
         </div>
       </div>
 
       <div v-if="selectedImage" class="modal">
-        <!-- <img :src="selectedImage.url" alt="Selected Image" @click="hideImage" /> -->
+        <img :src="selectedImage.url" alt="Selected Image" @click="hideImage" />
       </div>
 
     </div>
@@ -196,7 +196,7 @@
               <div class="top_caption">Testimonial</div>
               <div class="slider_paragraph_title">
                 <h3>
-                  <span>"Anh thích con người em"</span>
+                  <span>"Tớ thích con người cậu"</span>
                 </h3>
                 <div class="slider_comment">
                   <!-- <img src="@/assets/logo3.jpg" class="slider_comment_avatar rounded-circle" alt="Son image" /> -->
@@ -336,12 +336,12 @@ export default {
   data() {
     return {
       gallery: [
-        // { id: 1, url: require('@/assets/img/img44.jpg') },
-        // { id: 2, url: require('@/assets/img/img45.jpg') },
-        // { id: 3, url: require('@/assets/img/img55.jpg') },
-        // { id: 4, url: require('@/assets/img/img5.jpg') },
-        // { id: 5, url: require('@/assets/img/img25.jpg') },
-        // { id: 6, url: require('@/assets/img/img26.jpg') },
+        { id: 1, url: require('@/assets/img/gallery01.png') },
+        { id: 2, url: require('@/assets/img/gallery02.png') },
+        { id: 3, url: require('@/assets/img/gallery03.png') },
+        { id: 4, url: require('@/assets/img/gallery04.png') },
+        { id: 5, url: require('@/assets/img/gallery05.png') },
+        { id: 6, url: require('@/assets/img/gallery06.png') },
       ],
       selectedImage: null,
       // For infinite loop
@@ -381,7 +381,7 @@ export default {
       var element = event.target;
       var rect = element.getBoundingClientRect();
       var x = rect.left;
-      var element_height = 558 * row;
+      var element_height = 512 * row;
       var currentLeft = parseInt(x) || 0;
       // calculate the chosen Image
       document.getElementById("image_cover").style.left = currentLeft + 'px';
