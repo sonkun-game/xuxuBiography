@@ -368,11 +368,11 @@ export default {
       var currentDay = new Date();
       var loveDay = new Date("2023/09/02");
       // check year
-      var countYear = (currentDay.getFullYear() - loveDay.getFullYear())*365;
+      var countYear = Math.abs(currentDay.getFullYear() - loveDay.getFullYear())*365;
       // check month
-      var countMonth = (currentDay.getMonth() - loveDay.getMonth())*30;
+      var countMonth = Math.abs(currentDay.getMonth() - loveDay.getMonth())*30;
       // check day
-      var countDay = currentDay.getDate() - loveDay.getDate();
+      var countDay = Math.abs(currentDay.getDate() - loveDay.getDate());
       return countYear + countMonth + countDay;
     },
   },
