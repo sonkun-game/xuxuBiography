@@ -56,7 +56,7 @@
           </div>
           <div class="carousel-item">
             <div class="image_slider">
-              <img class="slide_item w-100" src="./assets/slide/slide3.jpg" alt="Third slide">
+              <img class="slide_item w-100" src="./assets/slide/slide2.jpg" alt="Third slide">
               <div class="slider_title">
                 <span class="small_text">Action Shot</span>
                 <h1>Nature of beauty</h1>
@@ -82,7 +82,7 @@
       <div class="left_description">
         <div class="m-auto">
           <h1 class="description_header">
-            Hi there, my name Xu and I love photography
+            Hi there, This is my page for me and my boyfriend
           </h1>
           <p>
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
@@ -91,15 +91,15 @@
         </div>
       </div>
       <div class="about_img">
-        <img class="w-100" src="./assets/img/img41.jpg" alt="First slide">
+        <img class="w-100" src="./assets/img/img41.png" alt="First slide">
       </div>
       <div class="right_description">
         <div class="m-auto">
-          <p>I'm </p>
+          <p>We had love for </p>
           <h1 class="description_number">
-            23
+            {{ calculateLoverDate }}
           </h1>
-          <p>Years old</p>
+          <p>Days</p>
           <p>
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
             aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta.
@@ -124,12 +124,12 @@
       <div class="row photo_row">
         <div class="image_item" v-for="image, index in gallery" @mouseover="onHoverPhoto($event, Math.floor(index / 3))"
           @click="showImage(image)" :key="image.id">
-          <img class="w-100" :src="image.url" alt="Gallery Image">
+          <!-- <img class="w-100" :src="image.url" alt="Gallery Image"> -->
         </div>
       </div>
 
       <div v-if="selectedImage" class="modal">
-        <img :src="selectedImage.url" alt="Selected Image" @click="hideImage" />
+        <!-- <img :src="selectedImage.url" alt="Selected Image" @click="hideImage" /> -->
       </div>
 
     </div>
@@ -142,7 +142,7 @@
       <div class="poster-body">
 
         <div class="card">
-          <img src="@/assets/img/img28.jpg" alt="Poster Image" />
+          <!-- <img src="@/assets/img/img28.jpg" alt="Poster Image" /> -->
           <div class="card-body">
             <h2 class="card-title">Xu Xu Photo</h2>
             <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
@@ -150,7 +150,7 @@
           </div>
         </div>
         <div class="card">
-          <img src="@/assets/img/img31.jpg" alt="Poster Image" />
+          <!-- <img src="@/assets/img/img31.jpg" alt="Poster Image" /> -->
           <div class="card-body">
             <h2 class="card-title">Xu Xu Photo</h2>
             <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
@@ -158,7 +158,7 @@
           </div>
         </div>
         <div class="card">
-          <img src="@/assets/img/img34.jpg" alt="Poster Image" />
+          <!-- <img src="@/assets/img/img34.jpg" alt="Poster Image" /> -->
           <div class="card-body">
             <h2 class="card-title">Xu Xu Photo</h2>
             <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
@@ -183,7 +183,7 @@
                   <span>"Anh thích những tấm ảnh của em"</span>
                 </h3>
                 <div class="slider_comment">
-                  <img src="@/assets/logo3.jpg" class="slider_comment_avatar rounded-circle" alt="Son image" />
+                  <!-- <img src="@/assets/logo3.jpg" class="slider_comment_avatar rounded-circle" alt="Son image" /> -->
                 </div>
                 <div class="small_text">
                   Hoang Son, The Software Developer
@@ -199,7 +199,7 @@
                   <span>"Anh thích con người em"</span>
                 </h3>
                 <div class="slider_comment">
-                  <img src="@/assets/logo3.jpg" class="slider_comment_avatar rounded-circle" alt="Son image" />
+                  <!-- <img src="@/assets/logo3.jpg" class="slider_comment_avatar rounded-circle" alt="Son image" /> -->
                 </div>
                 <div class="small_text">
                   Hoang Son, The Software Developer
@@ -215,7 +215,7 @@
                   <span>"Chúc mừng sinh nhật em 🎂, hi vọng em luôn mỉm cười mỗi ngày"</span>
                 </h3>
                 <div class="slider_comment">
-                  <img src="@/assets/logo3.jpg" class="slider_comment_avatar rounded-circle" alt="Son image" />
+                  <!-- <img src="@/assets/logo3.jpg" class="slider_comment_avatar rounded-circle" alt="Son image" /> -->
                 </div>
                 <div class="small_text">
                   Hoang Son, The Software Developer
@@ -246,67 +246,67 @@
 
       <div class="image-list">
         <div>
-          <img src="@/assets/square_img_300/img1.jpg" />
+          <!-- <img src="@/assets/square_img_300/img1.jpg" /> -->
           <div class="image-item-cover">
             <i class="fa-brands fa-instagram Fs24"></i>
           </div>
         </div>
         <div>
-          <img src="@/assets/square_img_300/img2.jpg" />
+          <!-- <img src="@/assets/square_img_300/img2.jpg" /> -->
           <div class="image-item-cover">
             <i class="fa-brands fa-instagram Fs24"></i>
           </div>
         </div>
         <div>
-          <img src="@/assets/square_img_300/img3.jpg" />
+          <!-- <img src="@/assets/square_img_300/img3.jpg" /> -->
           <div class="image-item-cover">
             <i class="fa-brands fa-instagram Fs24"></i>
           </div>
         </div>
         <div>
-          <img src="@/assets/square_img_300/img4.jpg" />
+          <!-- <img src="@/assets/square_img_300/img4.jpg" /> -->
           <div class="image-item-cover">
             <i class="fa-brands fa-instagram Fs24"></i>
           </div>
         </div>
         <div>
-          <img src="@/assets/square_img_300/img5.jpg" />
+          <!-- <img src="@/assets/square_img_300/img5.jpg" /> -->
           <div class="image-item-cover">
             <i class="fa-brands fa-instagram Fs24"></i>
           </div>
         </div>
         <div>
-          <img src="@/assets/square_img_300/img6.jpg" />
+          <!-- <img src="@/assets/square_img_300/img6.jpg" /> -->
           <div class="image-item-cover">
             <i class="fa-brands fa-instagram Fs24"></i>
           </div>
         </div>
         <div>
-          <img src="@/assets/square_img_300/img7.jpg" />
+          <!-- <img src="@/assets/square_img_300/img7.jpg" /> -->
           <div class="image-item-cover">
             <i class="fa-brands fa-instagram Fs24"></i>
           </div>
         </div>
         <div>
-          <img src="@/assets/square_img_300/img8.jpg" />
+          <!-- <img src="@/assets/square_img_300/img8.jpg" /> -->
           <div class="image-item-cover">
             <i class="fa-brands fa-instagram Fs24"></i>
           </div>
         </div>
         <div>
-          <img src="@/assets/square_img_300/img9.jpg" />
+          <!-- <img src="@/assets/square_img_300/img9.jpg" /> -->
           <div class="image-item-cover">
             <i class="fa-brands fa-instagram Fs24"></i>
           </div>
         </div>
         <div>
-          <img src="@/assets/square_img_300/img10.jpg" />
+          <!-- <img src="@/assets/square_img_300/img10.jpg" /> -->
           <div class="image-item-cover">
             <i class="fa-brands fa-instagram Fs24"></i>
           </div>
         </div>
         <div>
-          <img src="@/assets/square_img_300/img11.jpg" />
+          <!-- <img src="@/assets/square_img_300/img11.jpg" /> -->
           <div class="image-item-cover">
             <i class="fa-brands fa-instagram Fs24"></i>
           </div>
@@ -333,16 +333,15 @@ window.onload = function () {
 };
 
 export default {
-
   data() {
     return {
       gallery: [
-        { id: 1, url: require('@/assets/img/img44.jpg') },
-        { id: 2, url: require('@/assets/img/img45.jpg') },
-        { id: 3, url: require('@/assets/img/img55.jpg') },
-        { id: 4, url: require('@/assets/img/img5.jpg') },
-        { id: 5, url: require('@/assets/img/img25.jpg') },
-        { id: 6, url: require('@/assets/img/img26.jpg') },
+        // { id: 1, url: require('@/assets/img/img44.jpg') },
+        // { id: 2, url: require('@/assets/img/img45.jpg') },
+        // { id: 3, url: require('@/assets/img/img55.jpg') },
+        // { id: 4, url: require('@/assets/img/img5.jpg') },
+        // { id: 5, url: require('@/assets/img/img25.jpg') },
+        // { id: 6, url: require('@/assets/img/img26.jpg') },
       ],
       selectedImage: null,
       // For infinite loop
@@ -360,9 +359,22 @@ export default {
     link: [
       {
         rel: "icon",
-        href: require("./assets/logo1.jpg")
+        // href: require("./assets/logo1.jpg")
       },
     ]
+  },
+  computed: {
+    calculateLoverDate() {
+      var currentDay = new Date();
+      var loveDay = new Date("2023/09/02");
+      // check year
+      var countYear = (currentDay.getFullYear() - loveDay.getFullYear())*365;
+      // check month
+      var countMonth = (currentDay.getMonth() - loveDay.getMonth())*30;
+      // check day
+      var countDay = currentDay.getDate() - loveDay.getDate();
+      return countYear + countMonth + countDay;
+    },
   },
   methods: {
     onHoverPhoto(event, row = 0) {
