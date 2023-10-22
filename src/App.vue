@@ -179,8 +179,8 @@
             <div class="image_slider_2">
               <div class="top_caption">Testimonial</div>
               <div class="slider_paragraph_title">
-                <h3>
-                  <span>"Anh thích những tấm ảnh của em"</span>
+                <h3>a
+                  <span>"Tớ thích cậu"</span>
                 </h3>
                 <div class="slider_comment">
                   <!-- <img src="@/assets/logo3.jpg" class="slider_comment_avatar rounded-circle" alt="Son image" /> -->
@@ -212,7 +212,7 @@
               <div class="top_caption">Testimonial</div>
               <div class="slider_paragraph_title">
                 <h3>
-                  <span>"Chúc mừng sinh nhật em 🎂, hi vọng em luôn mỉm cười mỗi ngày"</span>
+                  <span>"Làm người yêu t nhớ"</span>
                 </h3>
                 <div class="slider_comment">
                   <!-- <img src="@/assets/logo3.jpg" class="slider_comment_avatar rounded-circle" alt="Son image" /> -->
