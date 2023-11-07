@@ -1,6 +1,6 @@
 /* Slider -----------------------------------------------> */
 .image_slider {
-  height: 729px;
+  height: 94vh;
 }
 
 .image_slider_2 {
@@ -34,7 +34,7 @@
   width: 100%;
   font-family: "DFVN", sans-serif;
   position: absolute;
-  top: 45vh;
+  top: 26vh;
   color: white;
 }
 .top_caption {
@@ -52,5 +52,5 @@
   margin-bottom: 20px;
 }
 .slider_comment_avatar {
-  max-width: 60px;
+  max-width: 8vw;
 }

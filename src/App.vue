@@ -114,7 +114,7 @@
     <!-- Photo -->
     <div class="photo container-fluid no_padding" id="portfolio">
 
-      <div class="image_cover" id="image_cover">
+      <div class="image_cover" id="image_cover" style="display: none;">
         <div class="image_cover_title">
           <span>Xu Xu Beauty</span>
           <h1>Image Shot</h1>
@@ -142,7 +142,7 @@
       <div class="poster-body">
 
         <div class="card">
-          <!-- <img src="@/assets/img/img28.jpg" alt="Poster Image" /> -->
+          <img src="@/assets/poster/img01.jpg" alt="Poster Image" />
           <div class="card-body">
             <h2 class="card-title">Xu Xu Photo</h2>
             <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
@@ -150,7 +150,7 @@
           </div>
         </div>
         <div class="card">
-          <!-- <img src="@/assets/img/img31.jpg" alt="Poster Image" /> -->
+          <img src="@/assets/poster/img02.jpg" alt="Poster Image" />
           <div class="card-body">
             <h2 class="card-title">Xu Xu Photo</h2>
             <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
@@ -158,7 +158,7 @@
           </div>
         </div>
         <div class="card">
-          <!-- <img src="@/assets/img/img34.jpg" alt="Poster Image" /> -->
+          <img src="@/assets/poster/img03.jpg" alt="Poster Image" />
           <div class="card-body">
             <h2 class="card-title">Xu Xu Photo</h2>
             <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
@@ -179,11 +179,11 @@
             <div class="image_slider_2">
               <div class="top_caption">Testimonial</div>
               <div class="slider_paragraph_title">
-                <h3>a
+                <h3>
                   <span>"Tớ thích cậu"</span>
                 </h3>
                 <div class="slider_comment">
-                  <!-- <img src="@/assets/logo3.jpg" class="slider_comment_avatar rounded-circle" alt="Son image" /> -->
+                  <img src="@/assets/testi/img01.jpg" class="slider_comment_avatar rounded-circle" alt="Son image" />
                 </div>
                 <div class="small_text">
                   Hoang Son, The Software Developer
@@ -199,7 +199,7 @@
                   <span>"Tớ thích con người cậu"</span>
                 </h3>
                 <div class="slider_comment">
-                  <!-- <img src="@/assets/logo3.jpg" class="slider_comment_avatar rounded-circle" alt="Son image" /> -->
+                  <img src="@/assets/testi/img02.jpg" class="slider_comment_avatar rounded-circle" alt="Son image" />
                 </div>
                 <div class="small_text">
                   Hoang Son, The Software Developer
@@ -215,7 +215,7 @@
                   <span>"Làm người yêu t nhớ"</span>
                 </h3>
                 <div class="slider_comment">
-                  <!-- <img src="@/assets/logo3.jpg" class="slider_comment_avatar rounded-circle" alt="Son image" /> -->
+                  <img src="@/assets/testi/img03.jpg" class="slider_comment_avatar rounded-circle" alt="Son image" />
                 </div>
                 <div class="small_text">
                   Hoang Son, The Software Developer
@@ -336,12 +336,12 @@ export default {
   data() {
     return {
       gallery: [
-        { id: 1, url: require('@/assets/img/gallery01.png') },
-        { id: 2, url: require('@/assets/img/gallery02.png') },
-        { id: 3, url: require('@/assets/img/gallery03.png') },
-        { id: 4, url: require('@/assets/img/gallery04.png') },
-        { id: 5, url: require('@/assets/img/gallery05.png') },
-        { id: 6, url: require('@/assets/img/gallery06.png') },
+        { id: 1, url: require('@/assets/img/gallery01.jpg') },
+        { id: 2, url: require('@/assets/img/gallery02.jpg') },
+        { id: 3, url: require('@/assets/img/gallery03.jpg') },
+        { id: 4, url: require('@/assets/img/gallery04.jpg') },
+        { id: 5, url: require('@/assets/img/gallery05.jpg') },
+        { id: 6, url: require('@/assets/img/gallery06.jpg') },
       ],
       selectedImage: null,
       // For infinite loop

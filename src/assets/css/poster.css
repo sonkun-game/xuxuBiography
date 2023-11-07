@@ -15,6 +15,7 @@
     cursor: pointer;
     padding: 20px;
     margin: 20px;
+    border: none;
 }
 .card-title {
     font-family: 'PoiretOne', sans-serif;
