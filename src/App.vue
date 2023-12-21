@@ -246,71 +246,89 @@
 
       <div class="image-list">
         <div>
-          <!-- <img src="@/assets/square_img_300/img1.jpg" /> -->
+          <img src="@/assets/square_img_300/img1.png" />
           <div class="image-item-cover">
             <i class="fa-brands fa-instagram Fs24"></i>
           </div>
         </div>
         <div>
-          <!-- <img src="@/assets/square_img_300/img2.jpg" /> -->
+          <img src="@/assets/square_img_300/img2.png" />
           <div class="image-item-cover">
             <i class="fa-brands fa-instagram Fs24"></i>
           </div>
         </div>
         <div>
-          <!-- <img src="@/assets/square_img_300/img3.jpg" /> -->
+          <img src="@/assets/square_img_300/img3.png" />
           <div class="image-item-cover">
             <i class="fa-brands fa-instagram Fs24"></i>
           </div>
         </div>
         <div>
-          <!-- <img src="@/assets/square_img_300/img4.jpg" /> -->
+          <img src="@/assets/square_img_300/img4.png" />
           <div class="image-item-cover">
             <i class="fa-brands fa-instagram Fs24"></i>
           </div>
         </div>
         <div>
-          <!-- <img src="@/assets/square_img_300/img5.jpg" /> -->
+          <img src="@/assets/square_img_300/img5.png" />
           <div class="image-item-cover">
             <i class="fa-brands fa-instagram Fs24"></i>
           </div>
         </div>
         <div>
-          <!-- <img src="@/assets/square_img_300/img6.jpg" /> -->
+          <img src="@/assets/square_img_300/img6.png" />
           <div class="image-item-cover">
             <i class="fa-brands fa-instagram Fs24"></i>
           </div>
         </div>
         <div>
-          <!-- <img src="@/assets/square_img_300/img7.jpg" /> -->
+          <img src="@/assets/square_img_300/img7.png" />
           <div class="image-item-cover">
             <i class="fa-brands fa-instagram Fs24"></i>
           </div>
         </div>
         <div>
-          <!-- <img src="@/assets/square_img_300/img8.jpg" /> -->
+          <img src="@/assets/square_img_300/img8.png" />
           <div class="image-item-cover">
             <i class="fa-brands fa-instagram Fs24"></i>
           </div>
         </div>
         <div>
-          <!-- <img src="@/assets/square_img_300/img9.jpg" /> -->
+          <img src="@/assets/square_img_300/img9.png" />
           <div class="image-item-cover">
             <i class="fa-brands fa-instagram Fs24"></i>
           </div>
         </div>
         <div>
-          <!-- <img src="@/assets/square_img_300/img10.jpg" /> -->
+          <img src="@/assets/square_img_300/img10.png" />
           <div class="image-item-cover">
             <i class="fa-brands fa-instagram Fs24"></i>
           </div>
         </div>
         <div>
-          <!-- <img src="@/assets/square_img_300/img11.jpg" /> -->
+          <img src="@/assets/square_img_300/img11.png" />
           <div class="image-item-cover">
             <i class="fa-brands fa-instagram Fs24"></i>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div id="todo" class="todo">
+      <div class="todo-container">
+        <div class="todo-header">
+        100 list to-do things together : {{ calculateDoneList }} / {{ toDoListCount }}
+      </div>
+      <ul class="todo-ul">
+        <li class="todo-list" v-for="(item, index) in todo" :key="index">
+          <div v-if="item.done">
+            <del> <span style="margin-right: 4px;">{{ index + 1 }}</span><span>{{ item.name }}</span> </del>
+          </div>
+          <div v-else>
+            <span style="margin-right: 4px;">{{ index + 1 }}</span><span>{{ item.name }}</span>
+          </div>
+        </li>
+      </ul>
       </div>
     </div>
 
@@ -342,6 +360,180 @@ export default {
         { id: 4, url: require('@/assets/img/gallery04.jpg') },
         { id: 5, url: require('@/assets/img/gallery05.jpg') },
         { id: 6, url: require('@/assets/img/gallery06.jpg') },
+      ],
+      todo: [
+        { 
+          name: "Làm hoa cùng nhau",
+          done : false
+        },
+        { 
+          name: "Nấu ăn cùng nhau",
+          done : true
+        },
+        { 
+          name: "tắm cùng nhau",
+          done : false
+        },
+        { 
+          name: "Đi xem phim cùng nhau",
+          done : true
+        },
+        { 
+          name: "Đi bơi cùng nhau",
+          done : false
+        },
+        { 
+          name: "Đi tô tượng cùng nhau",
+          done : true
+        },
+        { 
+          name: "Đạp xe cùng nhau quanh hồ tây",
+          done : true
+        },
+        { 
+          name: "Đạp vịt cùng nhau",
+          done : true
+        },
+        { 
+          name: "Đi ăn lẩu cùng nhau",
+          done : true
+        },
+        { 
+          name: "Đi dã ngoại cùng nhau",
+          done : true
+        },
+        { 
+          name: "Cùng nhau đi bãi đá sông Hồng và chụp ảnh",
+          done : false
+        },
+        { 
+          name: "Cùng nhau đi shopping",
+          done : true
+        },
+        { 
+          name: "Cùng nhau đi chụp ảnh lấy luôn",
+          done : false
+        },
+        { 
+          name: "Đi nhà ma",
+          done : false
+        },
+        { 
+          name: "Cùng nhau đi trượt patin",
+          done : false
+        },
+        { 
+          name: "Cùng nhau gắp thú",
+          done : true
+        },
+        { 
+          name: "Cùng nhau chơi game",
+          done : true
+        },
+        { 
+          name: "Cùng nhau mặc đồ đôi",
+          done : false
+        },
+        { 
+          name: "Netflix and chill",
+          done : true
+        },
+        { 
+          name: "Massage cho nhau",
+          done : true
+        },
+        { 
+          name: "Cùng nhau ăn tối lãng mạn",
+          done : false
+        },
+        { 
+          name: "Cùng nhau đi chơi ở phố đi bộ",
+          done : false
+        },
+        { 
+          name: "Cùng nhau đi nhậu",
+          done : false
+        },
+        { 
+          name: "Cùng nhau trao quà noel",
+          done : false
+        },
+        { 
+          name: "Cùng nhau làm gốm",
+          done : false
+        },
+        { 
+          name: "Cùng nhau đi thủy cung",
+          done : false
+        },
+        { 
+          name: "Lên tòa nhà cao nhất Hà Nội",
+          done : false
+        },
+        { 
+          name: "Cùng nhàu đi nhà tù Hỏa Lò",
+          done : false
+        },
+        { 
+          name: "Cùng nhàu đi Hoàng Thành Thăng Long, chụp ảnh mặc cổ phục",
+          done : false
+        },
+        { 
+          name: "Có sáu múi",
+          done : false
+        },
+        { 
+          name: "Khóa môi từ 5 đến 10 phút",
+          done : true
+        },
+        { 
+          name: "Đăng ảnh nhau trên insta",
+          done : true
+        },
+        { 
+          name: "Cùng nhau đi hiệu sách",
+          done : false
+        },
+        { 
+          name: "Cùng nhau vẽ tranh",
+          done : false
+        },
+        { 
+          name: "Viết thư tình cho nhau, càng sến càng tốt",
+          done : true
+        },
+        { 
+          name: "Đút cho nhau ăn, đến khi hết bữa ăn",
+          done : true
+        },
+        { 
+          name: "Cùng nhau đi nhà thờ",
+          done : true
+        },
+        { 
+          name: "Cùng nhau đi làm nến thớm",
+          done : false
+        },
+        { 
+          name: "Cùng nhau đi ăn khoai & ngô nướng vào trời giá rét",
+          done : true
+        },
+        { 
+          name: "Cùng nhau đi thuyền",
+          done : false
+        },
+        { 
+          name: "Cùng nhau đi ăn sushi",
+          done : false
+        },
+        { 
+          name: "Cùng nhau đi xem tarot",
+          done : false
+        },
+        { 
+          name: "Cùng nhau đi lắp lego",
+          done : false
+        },
       ],
       selectedImage: null,
       // For infinite loop
@@ -375,6 +567,18 @@ export default {
       var countDay = Math.abs(currentDay.getDate() - loveDay.getDate());
       return countYear + countMonth + countDay;
     },
+    calculateDoneList() {
+      var count = 0;
+      this.todo.forEach((el) => {
+        if(el.done) {
+          count++;
+        }
+      })
+      return count;
+    },
+    toDoListCount() {
+      return this.todo.length
+    }
   },
   methods: {
     onHoverPhoto(event, row = 0) {
@@ -454,6 +658,7 @@ export default {
 @import url('@/assets/css/social.css');
 @import url('@/assets/css/scrollToTop.css');
 @import url('@/assets/css/mobile.css');
+@import url('@/assets/css/todo.css');
 
 .btn {
   font-family: 'Jost', sans-serif;
