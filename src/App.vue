@@ -322,7 +322,9 @@
       <ul class="todo-ul">
         <li class="todo-list" v-for="(item, index) in todo" :key="index">
           <div v-if="item.done">
-            <del> <span style="margin-right: 4px;">{{ index + 1 }}</span><span>{{ item.name }}</span> </del>
+            <span style="color: coral">
+              <span style="margin-right: 4px; color: coral">{{ index + 1 }}</span><span>{{ item.name }}</span> ❤️
+            </span>
           </div>
           <div v-else>
             <span style="margin-right: 4px;">{{ index + 1 }}</span><span>{{ item.name }}</span>
