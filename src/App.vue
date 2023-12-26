@@ -536,6 +536,78 @@ export default {
           name: "Cùng nhau đi lắp lego",
           done : false
         },
+        { 
+          name: "Cùng nhau đi chùa",
+          done : false
+        },
+        { 
+          name: "Cùng nhau thức đếm countdown",
+          done : false
+        },
+        { 
+          name: "Cùng nhau thức đếm countdown",
+          done : false
+        },
+        { 
+          name: "Cùng nhau đi cafe nằm",
+          done : true
+        },
+        { 
+          name: "Cùng nhau đi làm nail",
+          done : false
+        },
+        { 
+          name: "Cùng nhau đi chơi bowling",
+          done : false
+        },
+        { 
+          name: "Cùng nhau đi hội chợ( đồ cũ, sự kiện, ...)",
+          done : false
+        },
+        { 
+          name: "Tỏ tình lần 2",
+          done : false
+        },
+        { 
+          name: "Cùng nhau chơi game xèng",
+          done : false
+        },
+        { 
+          name: "Cùng nhau chơi game xèng",
+          done : false
+        },
+        { 
+          name: "Cùng nhau nhảy/ khiêu vũ",
+          done : false
+        },
+        { 
+          name: "Cùng nhau đi xe đụng/ tàu lượn ở khu vui chơi",
+          done : false
+        },
+        { 
+          name: "Cùng nhau xem phim kinh dị lúc nửa đêm",
+          done : true
+        },
+        { 
+          name: "Cùng nhau đi spa làm đẹp",
+          done : false
+        },
+        { 
+          name: "Cùng nhau đi hát",
+          done : false
+        },
+        { 
+          name: "Cùng nhau đi tập thể dục buổi sáng sớm",
+          done : true
+        },
+        { 
+          name: "Cùng nhau đi trượt băng",
+          done : false
+        },
+        { 
+          name: "Cùng nhau làm cocktail",
+          done : false
+        },
       ],
       selectedImage: null,
       // For infinite loop
