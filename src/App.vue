@@ -522,7 +522,7 @@ export default {
         },
         { 
           name: "Cùng nhau đi thuyền",
-          done : false
+          done : true
         },
         { 
           name: "Cùng nhau đi ăn sushi",
