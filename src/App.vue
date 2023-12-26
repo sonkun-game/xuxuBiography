@@ -545,10 +545,6 @@ export default {
           done : false
         },
         { 
-          name: "Cùng nhau thức đếm countdown",
-          done : false
-        },
-        { 
           name: "Cùng nhau đi cafe nằm",
           done : true
         },
@@ -566,10 +562,6 @@ export default {
         },
         { 
           name: "Tỏ tình lần 2",
-          done : false
-        },
-        { 
-          name: "Cùng nhau chơi game xèng",
           done : false
         },
         { 
