@@ -585,7 +585,7 @@ export default {
           done : false
         },
         { 
-          name: "Cùng nhau đi hát",
+          name: "Cùng nhau đi hát và hát cho nhau nghe",
           done : false
         },
         { 
@@ -598,6 +598,38 @@ export default {
         },
         { 
           name: "Cùng nhau làm cocktail",
+          done : false
+        },
+        { 
+          name: "Sấy tóc cho nhau",
+          done : false
+        },
+        { 
+          name: "Cùng nhau chơi trò mạo hiểm",
+          done : false
+        },
+        { 
+          name: "Cùng nhau đi phượt (food tour Hải Phòng)",
+          done : false
+        },
+        { 
+          name: "Cõng Xu đi 1 quãng đường",
+          done : true
+        },
+        { 
+          name: "Để người lên đầu",
+          done : true
+        },
+        { 
+          name: "Cùng nhau lên kế hoạch cho tương lai",
+          done : false
+        },
+        { 
+          name: "Cùng nhau chơi trò tán tỉnh, một sẽ cố gắng tán tỉnh, một người sẽ khéo léo từ chối",
+          done : false
+        },
+        { 
+          name: "Cùng nhau ngắm hoàng hôn và bình minh",
           done : false
         },
       ],
