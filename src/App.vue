@@ -366,7 +366,7 @@ export default {
       todo: [
         { 
           name: "Làm hoa cùng nhau",
-          done : false
+          done : true
         },
         { 
           name: "Nấu ăn cùng nhau",
@@ -418,7 +418,7 @@ export default {
         },
         { 
           name: "Đi nhà ma",
-          done : false
+          done : true
         },
         { 
           name: "Cùng nhau đi trượt patin",
@@ -458,11 +458,11 @@ export default {
         },
         { 
           name: "Cùng nhau trao quà noel",
-          done : false
+          done : true
         },
         { 
           name: "Cùng nhau làm gốm",
-          done : false
+          done : true
         },
         { 
           name: "Cùng nhau đi thủy cung",
