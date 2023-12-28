@@ -640,6 +640,10 @@ export default {
           name: "Cùng nhau đi ăn xiên bẩn trước các cổng trường đại học",
           done : false
         },
+        { 
+          name: "Cùng nhau đi kiểm tra sức khỏe",
+          done : false
+        },
       ],
       selectedImage: null,
       // For infinite loop
