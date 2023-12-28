@@ -632,6 +632,14 @@ export default {
           name: "Cùng nhau ngắm hoàng hôn và bình minh",
           done : false
         },
+        { 
+          name: "Cùng nhau đón giao thừa và ngắm pháo hoa",
+          done : false
+        },
+        { 
+          name: "Cùng nhau đi ăn xiên bẩn trước các cổng trường đại học",
+          done : false
+        },
       ],
       selectedImage: null,
       // For infinite loop
