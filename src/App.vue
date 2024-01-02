@@ -317,7 +317,7 @@
     <div id="todo" class="todo">
       <div class="todo-container">
         <div class="todo-header">
-        100 list to-do things together : {{ calculateDoneList }} / {{ toDoListCount }}
+        100 list must-to-do things together : {{ calculateDoneList }} / {{ toDoListCount }}
       </div>
       <ul class="todo-ul">
         <li class="todo-list" v-for="(item, index) in todo" :key="index">
