@@ -414,7 +414,7 @@ export default {
         },
         { 
           name: "Cùng nhau đi chụp ảnh lấy luôn",
-          done : false
+          done : true
         },
         { 
           name: "Đi nhà ma",
@@ -494,7 +494,7 @@ export default {
         },
         { 
           name: "Cùng nhau đi hiệu sách",
-          done : false
+          done : true
         },
         { 
           name: "Cùng nhau vẽ tranh",
@@ -526,7 +526,7 @@ export default {
         },
         { 
           name: "Cùng nhau đi ăn sushi",
-          done : false
+          done : true
         },
         { 
           name: "Cùng nhau đi xem tarot",
@@ -566,7 +566,7 @@ export default {
         },
         { 
           name: "Cùng nhau chơi game xèng",
-          done : false
+          done : true
         },
         { 
           name: "Cùng nhau nhảy/ khiêu vũ",
@@ -586,7 +586,7 @@ export default {
         },
         { 
           name: "Cùng nhau đi hát và hát cho nhau nghe",
-          done : false
+          done : true
         },
         { 
           name: "Cùng nhau đi tập thể dục buổi sáng sớm",
@@ -643,6 +643,14 @@ export default {
         { 
           name: "Cùng nhau đi kiểm tra sức khỏe",
           done : false
+        },
+        { 
+          name: "Cùng nhau vượt qua game co-op 2 người",
+          done : false
+        },
+        { 
+          name: "Cùng nhau đi xe bus",
+          done : true
         },
       ],
       selectedImage: null,
