@@ -678,11 +678,24 @@ export default {
       var currentDay = new Date();
       var loveDay = new Date("2023/09/02");
       // check year
-      var countYear = Math.abs(currentDay.getFullYear() - loveDay.getFullYear())*365;
+      var countYear = Math.abs(currentDay.getFullYear() - loveDay.getFullYear());
+      if(countYear > 1) {
+        countYear = (countYear - 1) * 365;
+      } else {
+        countYear = 0;
+      }
+      console.log("countYear : " + countYear);
       // check month
-      var countMonth = Math.abs(currentDay.getMonth() - loveDay.getMonth())*30;
+      var countMonth = 0;
+      if(currentDay.getMonth() < loveDay.getMonth()) {
+        countMonth = ((12 + currentDay.getMonth()) - loveDay.getMonth()) * 30;
+      } else {
+        countMonth = Math.abs(currentDay.getMonth() - loveDay.getMonth())*30;
+      }
+      console.log("countMonth : " + countMonth);
       // check day
       var countDay = Math.abs(currentDay.getDate() - loveDay.getDate());
+      console.log("countDay : " + countDay);
       return countYear + countMonth + countDay;
     },
     calculateDoneList() {
