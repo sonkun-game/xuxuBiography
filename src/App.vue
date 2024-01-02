@@ -542,7 +542,7 @@ export default {
         },
         { 
           name: "Cùng nhau thức đếm countdown",
-          done : false
+          done : true
         },
         { 
           name: "Cùng nhau đi cafe nằm",
