@@ -314,24 +314,51 @@
       </div>
     </div>
 
+    <!-- Todo -->
     <div id="todo" class="todo">
       <div class="todo-container">
         <div class="todo-header">
-        100 list must-to-do things together : {{ calculateDoneList }} / {{ toDoListCount }}
+          100 list must-to-do things together : {{ calculateDoneList }} / {{ toDoListCount }}
+        </div>
+        <ul class="todo-ul">
+          <li class="todo-list" v-for="(item, index) in todo" :key="index">
+            <div v-if="item.done">
+              <span style="color: coral">
+                <span style="margin-right: 4px; color: coral">{{ index + 1 }}</span><span>{{ item.name }}</span> ❤️
+              </span>
+            </div>
+            <div v-else>
+              <span style="margin-right: 4px;">{{ index + 1 }}</span><span>{{ item.name }}</span>
+            </div>
+          </li>
+        </ul>
       </div>
-      <ul class="todo-ul">
-        <li class="todo-list" v-for="(item, index) in todo" :key="index">
-          <div v-if="item.done">
-            <span style="color: coral">
-              <span style="margin-right: 4px; color: coral">{{ index + 1 }}</span><span>{{ item.name }}</span> ❤️
-            </span>
-          </div>
-          <div v-else>
-            <span style="margin-right: 4px;">{{ index + 1 }}</span><span>{{ item.name }}</span>
-          </div>
-        </li>
-      </ul>
+    </div>
+
+    <!-- Plan -->
+    <div id="plan">
+      <div class="plan-container">
+        <div class="plan-header">
+          Plan
+        </div>
       </div>
+      <p>
+        2024
+        Mục tiêu :
+        trong năm : 2024 : mức lương trên 20
+        có 6 múi
+
+        Mục tiêu của Xu iu dấu:
+        đạt danh hiệu suất xắc
+        và giảm cân
+
+        Mục tiêu chung 2024 :
+        + Kiếm nhiều tiền, thăng tiến trong công việc
+        - đặt mục tiêu để ra khoảng 10tr/ tháng
+        + 2 đứa tiến đến hôn nhân (tháng 10 - 12)
+
+        2025: phải tốt nghiệp thạc sĩ
+      </p>
     </div>
 
     <!-- Scroll to top button -->
@@ -364,293 +391,293 @@ export default {
         { id: 6, url: require('@/assets/img/gallery06.jpg') },
       ],
       todo: [
-        { 
+        {
           name: "Làm hoa cùng nhau",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Nấu ăn cùng nhau",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "tắm cùng nhau",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Đi xem phim cùng nhau",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Đi bơi cùng nhau",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Đi tô tượng cùng nhau",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Đạp xe cùng nhau quanh hồ tây",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Đạp vịt cùng nhau",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Đi ăn lẩu cùng nhau",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Đi dã ngoại cùng nhau",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Cùng nhau đi bãi đá sông Hồng và chụp ảnh",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Cùng nhau đi shopping",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Cùng nhau đi chụp ảnh lấy luôn",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Đi nhà ma",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Cùng nhau đi trượt patin",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Cùng nhau gắp thú",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Cùng nhau chơi game",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Cùng nhau mặc đồ đôi",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Netflix and chill",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Massage cho nhau",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Cùng nhau ăn tối lãng mạn",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Cùng nhau đi chơi ở phố đi bộ",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Cùng nhau đi nhậu",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Cùng nhau trao quà noel",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Cùng nhau làm gốm",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Cùng nhau đi thủy cung",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Lên tòa nhà cao nhất Hà Nội",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Cùng nhàu đi nhà tù Hỏa Lò",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Cùng nhàu đi Hoàng Thành Thăng Long, chụp ảnh mặc cổ phục",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Có sáu múi",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Khóa môi từ 5 đến 10 phút",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Đăng ảnh nhau trên insta",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Cùng nhau đi hiệu sách",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Cùng nhau vẽ tranh",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Viết thư tình cho nhau, càng sến càng tốt",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Đút cho nhau ăn, đến khi hết bữa ăn",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Cùng nhau đi nhà thờ",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Cùng nhau đi làm nến thớm",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Cùng nhau đi ăn khoai & ngô nướng vào trời giá rét",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Cùng nhau đi thuyền",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Cùng nhau đi ăn sushi",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Cùng nhau đi xem tarot",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Cùng nhau đi lắp lego",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Cùng nhau đi chùa",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Cùng nhau thức đếm countdown",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Cùng nhau đi cafe nằm",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Cùng nhau đi làm nail",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Cùng nhau đi chơi bowling",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Cùng nhau đi hội chợ( đồ cũ, sự kiện, ...)",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Tỏ tình lần 2",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Cùng nhau chơi game xèng",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Cùng nhau nhảy/ khiêu vũ",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Cùng nhau đi xe đụng/ tàu lượn ở khu vui chơi",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Cùng nhau xem phim kinh dị lúc nửa đêm",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Cùng nhau đi spa làm đẹp",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Cùng nhau đi hát và hát cho nhau nghe",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Cùng nhau đi tập thể dục buổi sáng sớm",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Cùng nhau đi trượt băng",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Cùng nhau làm cocktail",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Sấy tóc cho nhau",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Cùng nhau chơi trò mạo hiểm",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Cùng nhau đi phượt (food tour Hải Phòng)",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Cõng Xu đi 1 quãng đường",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Để người lên đầu",
-          done : true
+          done: true
         },
-        { 
+        {
           name: "Cùng nhau lên kế hoạch cho tương lai",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Cùng nhau chơi trò tán tỉnh, một sẽ cố gắng tán tỉnh, một người sẽ khéo léo từ chối",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Cùng nhau ngắm hoàng hôn và bình minh",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Cùng nhau đón giao thừa và ngắm pháo hoa",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Cùng nhau đi ăn xiên bẩn trước các cổng trường đại học",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Cùng nhau đi kiểm tra sức khỏe",
-          done : false
+          done: false
         },
-        { 
+        {
           name: "Cùng nhau vượt qua game co-op 2 người",
-          done : false
+          done: true
         },
-        { 
+        {
           name: "Cùng nhau đi xe bus",
-          done : true
+          done: true
         },
       ],
       selectedImage: null,
@@ -679,7 +706,7 @@ export default {
       var loveDay = new Date("2023/09/02");
       // check year
       var countYear = Math.abs(currentDay.getFullYear() - loveDay.getFullYear());
-      if(countYear > 1) {
+      if (countYear > 1) {
         countYear = (countYear - 1) * 365;
       } else {
         countYear = 0;
@@ -687,10 +714,10 @@ export default {
       console.log("countYear : " + countYear);
       // check month
       var countMonth = 0;
-      if(currentDay.getMonth() < loveDay.getMonth()) {
+      if (currentDay.getMonth() < loveDay.getMonth()) {
         countMonth = ((12 + currentDay.getMonth()) - loveDay.getMonth()) * 30;
       } else {
-        countMonth = Math.abs(currentDay.getMonth() - loveDay.getMonth())*30;
+        countMonth = Math.abs(currentDay.getMonth() - loveDay.getMonth()) * 30;
       }
       console.log("countMonth : " + countMonth);
       // check day
@@ -701,7 +728,7 @@ export default {
     calculateDoneList() {
       var count = 0;
       this.todo.forEach((el) => {
-        if(el.done) {
+        if (el.done) {
           count++;
         }
       })
