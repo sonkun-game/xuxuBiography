@@ -342,7 +342,7 @@
           Plan
         </div>
       </div>
-      <p>
+      <pre>
         2024
         Mục tiêu :
         trong năm : 2024 : mức lương trên 20
@@ -358,7 +358,7 @@
         + 2 đứa tiến đến hôn nhân (tháng 10 - 12)
 
         2025: phải tốt nghiệp thạc sĩ
-      </p>
+      </pre>
     </div>
 
     <!-- Scroll to top button -->
