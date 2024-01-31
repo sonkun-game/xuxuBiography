@@ -525,7 +525,7 @@ export default {
         },
         {
           name: "Cùng nhau vẽ tranh",
-          done: false
+          done: true
         },
         {
           name: "Viết thư tình cho nhau, càng sến càng tốt",
@@ -561,7 +561,7 @@ export default {
         },
         {
           name: "Cùng nhau đi lắp lego",
-          done: false
+          done: true
         },
         {
           name: "Cùng nhau đi chùa",
