@@ -461,7 +461,7 @@ export default {
         },
         {
           name: "Cùng nhau mặc đồ đôi",
-          done: false
+          done: true
         },
         {
           name: "Netflix and chill",
@@ -679,6 +679,10 @@ export default {
           name: "Cùng nhau đi xe bus",
           done: true
         },
+        {
+          name: "Tổ chức sinh nhật cho nhau",
+          done: false
+        }
       ],
       selectedImage: null,
       // For infinite loop
