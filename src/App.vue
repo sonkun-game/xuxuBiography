@@ -621,10 +621,6 @@ export default {
           done: false
         },
         {
-          name: "Cùng nhau chơi trò tán tỉnh, một sẽ cố gắng tán tỉnh, một người sẽ khéo léo từ chối",
-          done: false
-        },
-        {
           name: "Cùng nhau ngắm hoàng hôn và bình minh",
           done: false
         },
@@ -663,6 +659,10 @@ export default {
         {
           name: "Cùng nhau đi ăn đêm",
           done: true
+        },
+        {
+          name: "Cùng nhau đi xem triển lãm",
+          done: false
         },
       ],
       selectedImage: null,
