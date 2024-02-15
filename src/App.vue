@@ -335,32 +335,6 @@
       </div>
     </div>
 
-    <!-- Plan -->
-    <div id="plan">
-      <div class="plan-container">
-        <div class="plan-header">
-          Plan
-        </div>
-      </div>
-      <pre>
-        2024
-        Mục tiêu :
-        trong năm : 2024 : mức lương trên 20
-        có 6 múi
-
-        Mục tiêu của Xu iu dấu:
-        đạt danh hiệu suất xắc
-        và giảm cân
-
-        Mục tiêu chung 2024 :
-        + Kiếm nhiều tiền, thăng tiến trong công việc
-        - đặt mục tiêu để ra khoảng 10tr/ tháng
-        + 2 đứa tiến đến hôn nhân (tháng 10 - 12)
-
-        2025: phải tốt nghiệp thạc sĩ
-      </pre>
-    </div>
-
     <!-- Scroll to top button -->
     <button class="scroll-to-top" @click="scrollToTop()">
       <i class="fa-solid fa-chevron-up"></i>
@@ -508,10 +482,6 @@ export default {
           done: false
         },
         {
-          name: "Có sáu múi",
-          done: false
-        },
-        {
           name: "Khóa môi từ 5 đến 10 phút",
           done: true
         },
@@ -565,7 +535,7 @@ export default {
         },
         {
           name: "Cùng nhau đi chùa",
-          done: false
+          done: true
         },
         {
           name: "Cùng nhau thức đếm countdown",
@@ -577,7 +547,7 @@ export default {
         },
         {
           name: "Cùng nhau đi làm nail",
-          done: false
+          done: true
         },
         {
           name: "Cùng nhau đi chơi bowling",
@@ -661,7 +631,7 @@ export default {
         },
         {
           name: "Cùng nhau đón giao thừa và ngắm pháo hoa",
-          done: false
+          done: true
         },
         {
           name: "Cùng nhau đi ăn xiên bẩn trước các cổng trường đại học",
@@ -681,8 +651,20 @@ export default {
         },
         {
           name: "Tổ chức sinh nhật cho nhau",
-          done: false
-        }
+          done: true
+        },
+        {
+          name: "Cùng nhau đi làm tóc",
+          done: true
+        },
+        {
+          name: "Cùng nhau đi sắm đồ tết",
+          done: true
+        },
+        {
+          name: "Cùng nhau đi ăn đêm",
+          done: true
+        },
       ],
       selectedImage: null,
       // For infinite loop
@@ -718,11 +700,43 @@ export default {
       console.log("countYear : " + countYear);
       // check month
       var countMonth = 0;
-      if (currentDay.getMonth() < loveDay.getMonth()) {
-        countMonth = ((12 + currentDay.getMonth()) - loveDay.getMonth()) * 30;
+
+      // 7 month is 31 + 7 
+      // 1 month is 28 - 3
+      // total -4 (if same month)
+      var months = [31,28,31,30,31,30,31,31,30,31,30,31];
+
+
+      // some month has 31 days, some month had 30 days
+      if(currentDay.getMonth() != loveDay.getMonth()) {
+        // calculate day from current Month to love Month
+        if (currentDay.getMonth() < loveDay.getMonth()) {
+          countMonth = ((12 + currentDay.getMonth()) - loveDay.getMonth()) * 30; 
+          var start = loveDay.getMonth();
+          var end = currentDay.getMonth();
+          var breakLoop = 0;
+          while (start > end) {
+            start++;
+            breakLoop++;
+            if(start == 12) start = 0;
+            if(months[start] == 31) {
+              countMonth+=1;
+            } else if (months[start] == 28) {
+              countMonth-=2;
+            }
+            if(breakLoop == 13) {
+              break;
+            }
+          }
+        } else {
+          countMonth = Math.abs(currentDay.getMonth() - loveDay.getMonth()) * 30;
+        }
       } else {
-        countMonth = Math.abs(currentDay.getMonth() - loveDay.getMonth()) * 30;
+        countMonth = Math.abs(currentDay.getMonth() - loveDay.getMonth()) * 30 + 4;
       }
+
+
+
       console.log("countMonth : " + countMonth);
       // check day
       var countDay = Math.abs(currentDay.getDate() - loveDay.getDate());
