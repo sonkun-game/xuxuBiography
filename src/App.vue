@@ -3,7 +3,6 @@
 
     <!-- Follow me !! -->
     <!-- <div class="social"></div> -->
-
     <!-- Slider Section -->
     <div class="container-fluid no_padding" id="carousel">
       <nav class="header">
@@ -57,10 +56,10 @@
           <div class="carousel-item">
             <div class="image_slider">
               <img class="slide_item w-100" src="./assets/slide/slide2.jpg" alt="Third slide">
-              <!-- <div class="slider_title">
+              <div class="slider_title">
                 <span class="small_text">Action Shot</span>
                 <h1>Nature of beauty</h1>
-              </div> -->
+              </div>
             </div>
           </div>
         </div>
