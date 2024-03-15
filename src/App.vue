@@ -450,7 +450,7 @@ export default {
         },
         {
           name: "Cùng nhau đi chơi ở phố đi bộ",
-          done: false
+          done: true
         },
         {
           name: "Cùng nhau đi nhậu",
@@ -509,8 +509,8 @@ export default {
           done: true
         },
         {
-          name: "Cùng nhau đi làm nến thớm",
-          done: false
+          name: "Cùng nhau đi làm nến thơm",
+          done: true
         },
         {
           name: "Cùng nhau đi ăn khoai & ngô nướng vào trời giá rét",
@@ -566,7 +566,7 @@ export default {
         },
         {
           name: "Cùng nhau nhảy/ khiêu vũ",
-          done: false
+          done: true
         },
         {
           name: "Cùng nhau đi xe đụng/ tàu lượn ở khu vui chơi",
@@ -662,6 +662,14 @@ export default {
         },
         {
           name: "Cùng nhau đi xem triển lãm",
+          done: true
+        },
+        {
+          name: "Cùng nhau đi ăn đêm ở phố đi bộ Hà Nội",
+          done: true
+        },
+        {
+          name: "Cùng nhau đi làm nước hoa",
           done: false
         },
       ],
