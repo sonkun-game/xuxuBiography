@@ -445,10 +445,6 @@ export default {
           done: true
         },
         {
-          name: "Cùng nhau ăn tối lãng mạn",
-          done: false
-        },
-        {
           name: "Cùng nhau đi chơi ở phố đi bộ",
           done: true
         },
@@ -466,10 +462,6 @@ export default {
         },
         {
           name: "Cùng nhau đi thủy cung",
-          done: false
-        },
-        {
-          name: "Lên tòa nhà cao nhất Hà Nội",
           done: false
         },
         {
@@ -688,6 +680,90 @@ export default {
           name: "Cùng nhau hẹn hò đôi",
           done: true
         },
+        {
+          name: "Cùng nhau đi xem phim ma vào nửa đêm",
+          done: true
+        },
+        {
+          name: "Cùng nhau ăn kem tràng tiền",
+          done: true
+        },
+        {
+          name: "Cùng nhau đi ăn tôm hùm đất trung quốc",
+          done: false
+        },
+        {
+          name: "Cùng nhau đi cafe sách",
+          done: false
+        },
+        {
+          name: "Cùng nhau đi ăn bún bò Huế ở Hồ Tây",
+          done: true
+        },
+        {
+          name: "Cùng nhau đi viện bảo tàng",
+          done: false
+        },
+        {
+          name: "Cùng nhau đi mua vàng",
+          done: true
+        },
+        {
+          name: "Cùng nhau đi leo núi",
+          done: false
+        },
+        {
+          name: "Cùng nhau đi vườn bách thú",
+          done: false
+        },
+        {
+          name: "Cùng nhau đi lăng bác",
+          done: false
+        },
+        {
+          name: "Cùng nhau đi ăn đồ nướng hàn quốc",
+          done: false
+        },
+        {
+          name: "Cùng nhau uống rượu (sochu)",
+          done: false
+        },
+        {
+          name: "Cùng nhau đi tàu hỏa",
+          done: false
+        },
+        {
+          name: "Cùng nhau đi xe buýt 2 tầng",
+          done: false
+        },
+        {
+          name: "Bên nhau tròn 1 năm",
+          done: false
+        },
+        {
+          name: "Lên tòa nhà cao nhất Hà Nội",
+          done: false
+        },
+        {
+          name: "Cùng nhau ăn tối lãng mạn",
+          done: false
+        },
+        {
+          name: "Cầu hôn",
+          done: false
+        },
+        {
+          name: "Cùng nhau đi chọn nhẫn",
+          done: false
+        },
+        {
+          name: "Cùng nhau đi chụp ảnh cưới",
+          done: false
+        },
+        {
+          name: "Cùng nhau đi tuần trăng mật ở singapore",
+          done: false
+        },
       ],
       selectedImage: null,
       // For infinite loop
@@ -779,6 +855,9 @@ export default {
       return this.todo.length
     }
   },
+  mounted() {
+    this.sortToDo();
+  },
   methods: {
     onHoverPhoto(event, row = 0) {
       var element = event.target;
@@ -837,11 +916,29 @@ export default {
     },
     scrollToEl(id) {
       vueScrollTo.scrollTo(id, { duration: 1000 });
+    },
+    sortToDo() {
+      var arr = [];
+      // done
+      this.todo.forEach((item) => {
+        if(item.done) {
+          arr.push(item);
+        }
+      });
+      // not done    
+      this.todo.forEach((item) => {
+        if(!item.done) {
+          arr.push(item);
+        }
+      });  
+      this.todo = arr;
+      console.log(arr);
     }
   },
   beforeUnmount() {
     this.stopAnimation();
-  }
+  },
+
 }
 </script>
 
