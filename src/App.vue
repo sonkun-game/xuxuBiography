@@ -374,7 +374,7 @@ export default {
         },
         {
           name: "tắm cùng nhau",
-          done: false
+          done: true
         },
         {
           name: "Đi xem phim cùng nhau",
@@ -594,7 +594,7 @@ export default {
         },
         {
           name: "Cùng nhau làm cocktail",
-          done: false
+          done: true
         },
         {
           name: "Sấy tóc cho nhau",
@@ -671,6 +671,22 @@ export default {
         {
           name: "Cùng nhau đi làm nước hoa",
           done: false
+        },
+        {
+          name: "Cùng nhau đi ngủ",
+          done: true
+        },
+        {
+          name: "Cùng nhau thức dậy",
+          done: true
+        },
+        {
+          name: "Cùng nhau đi ăn sáng",
+          done: true
+        },
+        {
+          name: "Cùng nhau hẹn hò đôi",
+          done: true
         },
       ],
       selectedImage: null,
