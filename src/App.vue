@@ -610,7 +610,7 @@ export default {
         },
         {
           name: "Cùng nhau lên kế hoạch cho tương lai",
-          done: false
+          done: true
         },
         {
           name: "Cùng nhau ngắm hoàng hôn và bình minh",
@@ -622,7 +622,7 @@ export default {
         },
         {
           name: "Cùng nhau đi ăn xiên bẩn trước các cổng trường đại học",
-          done: false
+          done: true
         },
         {
           name: "Cùng nhau đi kiểm tra sức khỏe",
