@@ -422,7 +422,7 @@ export default {
         },
         {
           name: "Cùng nhau đi trượt patin",
-          done: false
+          done: true
         },
         {
           name: "Cùng nhau gắp thú",
@@ -462,7 +462,7 @@ export default {
         },
         {
           name: "Cùng nhau đi thủy cung",
-          done: false
+          done: true
         },
         {
           name: "Cùng nhàu đi nhà tù Hỏa Lò",
@@ -590,7 +590,7 @@ export default {
         },
         {
           name: "Sấy tóc cho nhau",
-          done: false
+          done: true
         },
         {
           name: "Cùng nhau chơi trò mạo hiểm",
@@ -662,7 +662,7 @@ export default {
         },
         {
           name: "Cùng nhau đi làm nước hoa",
-          done: false
+          done: true
         },
         {
           name: "Cùng nhau đi ngủ",
@@ -722,7 +722,7 @@ export default {
         },
         {
           name: "Cùng nhau đi ăn đồ nướng hàn quốc",
-          done: false
+          done: true
         },
         {
           name: "Cùng nhau uống rượu (sochu)",
@@ -761,9 +761,14 @@ export default {
           done: false
         },
         {
+          name: "Cùng nhau đẩy thuyền 1 cặp đôi",
+          done: true
+        },
+        {
           name: "Cùng nhau đi tuần trăng mật ở singapore",
           done: false
         },
+        
       ],
       selectedImage: null,
       // For infinite loop
