@@ -765,10 +765,25 @@ export default {
           done: true
         },
         {
+          name: "Cùng nhau đẩy thuyền 1 cặp đôi",
+          done: true
+        },
+        {
+          name: "Cùng nhau đi đú concert",
+          done: false
+        },
+        {
+          name: "Thiết kế lại trang web",
+          done: false
+        },
+        {
+          name: "Đi du lịch Ai Cập",
+          done: false
+        },
+        {
           name: "Cùng nhau đi tuần trăng mật ở singapore",
           done: false
         },
-        
       ],
       selectedImage: null,
       // For infinite loop
