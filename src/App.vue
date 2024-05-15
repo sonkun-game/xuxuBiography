@@ -470,7 +470,7 @@ export default {
         },
         {
           name: "Cùng nhàu đi Hoàng Thành Thăng Long, chụp ảnh mặc cổ phục",
-          done: false
+          done: true
         },
         {
           name: "Khóa môi từ 5 đến 10 phút",
@@ -765,8 +765,8 @@ export default {
           done: true
         },
         {
-          name: "Cùng nhau đẩy thuyền 1 cặp đôi",
-          done: true
+          name: "Cùng nhau học thạc sĩ",
+          done: false
         },
         {
           name: "Cùng nhau đi đú concert",
@@ -783,6 +783,18 @@ export default {
         {
           name: "Cùng nhau đi tuần trăng mật ở singapore",
           done: false
+        },
+        {
+          name: "Cùng nhau làm tinh thể",
+          done: true
+        },
+        {
+          name: "Cùng nhau chèo thuyền",
+          done: false
+        },
+        {
+          name: "Cùng nhau đi chụp ảnh nàng thơ",
+          done: true
         },
       ],
       selectedImage: null,
