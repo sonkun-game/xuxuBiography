@@ -796,6 +796,10 @@ export default {
           name: "Cùng nhau đi chụp ảnh nàng thơ",
           done: true
         },
+        {
+          name: "Cùng nhau đi lướt sóng",
+          done: false
+        },
       ],
       selectedImage: null,
       // For infinite loop
