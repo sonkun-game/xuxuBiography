@@ -450,7 +450,7 @@ export default {
         },
         {
           name: "Cùng nhau đi nhậu",
-          done: false
+          done: true
         },
         {
           name: "Cùng nhau trao quà noel",
