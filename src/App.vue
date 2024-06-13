@@ -466,7 +466,7 @@ export default {
         },
         {
           name: "Cùng nhàu đi nhà tù Hỏa Lò",
-          done: false
+          done: true
         },
         {
           name: "Cùng nhàu đi Hoàng Thành Thăng Long, chụp ảnh mặc cổ phục",
@@ -694,7 +694,7 @@ export default {
         },
         {
           name: "Cùng nhau đi cafe sách",
-          done: false
+          done: true
         },
         {
           name: "Cùng nhau đi ăn bún bò Huế ở Hồ Tây",
@@ -702,7 +702,7 @@ export default {
         },
         {
           name: "Cùng nhau đi viện bảo tàng",
-          done: false
+          done: true
         },
         {
           name: "Cùng nhau đi mua vàng",
@@ -718,7 +718,7 @@ export default {
         },
         {
           name: "Cùng nhau đi lăng bác",
-          done: false
+          done: true
         },
         {
           name: "Cùng nhau đi ăn đồ nướng hàn quốc",
