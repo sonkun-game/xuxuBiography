@@ -550,7 +550,7 @@ export default {
         },
         {
           name: "Tỏ tình lần 2",
-          done: false
+          done: true
         },
         {
           name: "Cùng nhau chơi game xèng",
@@ -626,7 +626,7 @@ export default {
         },
         {
           name: "Cùng nhau đi kiểm tra sức khỏe",
-          done: false
+          done: true
         },
         {
           name: "Cùng nhau vượt qua game co-op 2 người",
@@ -690,7 +690,7 @@ export default {
         },
         {
           name: "Cùng nhau đi ăn tôm hùm đất trung quốc",
-          done: false
+          done: true
         },
         {
           name: "Cùng nhau đi cafe sách",
@@ -742,15 +742,15 @@ export default {
         },
         {
           name: "Lên tòa nhà cao nhất Hà Nội",
-          done: false
+          done: true
         },
         {
           name: "Cùng nhau ăn tối lãng mạn",
-          done: false
+          done: true
         },
         {
           name: "Cầu hôn",
-          done: false
+          done: true
         },
         {
           name: "Cùng nhau đi chọn nhẫn",
